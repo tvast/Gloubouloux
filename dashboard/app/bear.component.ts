@@ -19,8 +19,21 @@ export class BearComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.bearService.getBears()
-      .then(bears => this.bears = bears.slice(1, 5));
+    this.bearService.getBears2().subscribe(bears => this.bears = bears);
+    this.loadBears();
+  }
+
+  loadBears() {
+
+    this.bearService.getBears2().subscribe(
+      bears => {
+        console.log(bears)
+
+      }
+      // ,error => {
+      //   this.errorMessage = this._errorMappingService.getMessage(<any>error);
+      // }
+    );
   }
 
   gotoDetail(bear: Bear): void {

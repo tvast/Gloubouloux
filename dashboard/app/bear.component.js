@@ -19,8 +19,13 @@ var BearComponent = (function () {
     }
     BearComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.bearService.getBears()
-            .then(function (bears) { return _this.bears = bears.slice(1, 5); });
+        this.bearService.getBears2().subscribe(function (bears) { return _this.bears = bears; });
+        this.loadBears();
+    };
+    BearComponent.prototype.loadBears = function () {
+        this.bearService.getBears2().subscribe(function (bears) {
+            console.log(bears);
+        });
     };
     BearComponent.prototype.gotoDetail = function (bear) {
         var link = ['/detail', bear.id];

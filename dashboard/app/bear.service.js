@@ -13,44 +13,56 @@ var http_1 = require('@angular/http');
 // import { Hero } from './hero';
 // import { HEROES } from './mock-heroes';
 require('rxjs/add/operator/toPromise');
+require('rxjs/add/operator/map');
+require('rxjs/Rx');
 var BearService = (function () {
     function BearService(http) {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.bearUrl = 'http://localhost:8080/api/bears'; // URL to web api
     }
-    BearService.prototype.getBears = function () {
+    // getBears(): Promise<Bear[]> {
+    //   return this.http.get(this.bearUrl)
+    //              .toPromise()
+    //              .then(response => response.json().data as Bear[])
+    //              .catch(this.handleError);
+    // }
+    BearService.prototype.getBears2 = function () {
+        // return Observable<Check[]>
         return this.http.get(this.bearUrl)
-            .toPromise()
-            .then(function (response) { return response.json().data; })
+            .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    BearService.prototype.getBear = function (id) {
-        return this.getBears()
-            .then(function (bears) { return bears.find(function (bear) { return bear.id === id; }); });
-    };
-    BearService.prototype.delete = function (id) {
-        var url = this.bearUrl + "/" + id;
-        return this.http.delete(url, { headers: this.headers })
-            .toPromise()
-            .then(function () { return null; })
-            .catch(this.handleError);
-    };
-    BearService.prototype.create = function (name) {
-        return this.http
-            .post(this.bearUrl, JSON.stringify({ name: name }), { headers: this.headers })
-            .toPromise()
-            .then(function (res) { return res.json().data; })
-            .catch(this.handleError);
-    };
-    BearService.prototype.update = function (bear) {
-        var url = this.bearUrl + "/" + bear.id;
-        return this.http
-            .put(url, JSON.stringify(bear), { headers: this.headers })
-            .toPromise()
-            .then(function () { return bear; })
-            .catch(this.handleError);
-    };
+    //
+    // getBear(id: number): Promise<Bear> {
+    //   return this.getBears()
+    //              .then(bears => bears.find(bear => bear.id === id));
+    // }
+    //
+    // delete(id: number): Promise<void> {
+    //   const url = `${this.bearUrl}/${id}`;
+    //   return this.http.delete(url, {headers: this.headers})
+    //     .toPromise()
+    //     .then(() => null)
+    //     .catch(this.handleError);
+    // }
+    //
+    // create(name: string): Promise<Bear> {
+    //   return this.http
+    //     .post(this.bearUrl, JSON.stringify({name: name}), {headers: this.headers})
+    //     .toPromise()
+    //     .then(res => res.json().data)
+    //     .catch(this.handleError);
+    // }
+    //
+    // update(bear: Bear): Promise<Bear> {
+    //   const url = `${this.bearUrl}/${bear.id}`;
+    //   return this.http
+    //     .put(url, JSON.stringify(bear), {headers: this.headers})
+    //     .toPromise()
+    //     .then(() => bear)
+    //     .catch(this.handleError);
+    // }
     BearService.prototype.handleError = function (error) {
         console.error('An error occurred', error); // for demo purposes only
         return Promise.reject(error.message || error);
