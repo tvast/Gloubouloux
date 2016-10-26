@@ -5,16 +5,17 @@
 var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
+var cors       = require('cors')
 var morgan     = require('morgan');
 
 // configure app
 app.use(morgan('dev')); // log requests to the console
 
-app.all('/', function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
- });
+app.use(cors());
+
+// app.get('/api/bears', function(req, res, next){
+//   res.json({msg: 'This is CORS-enabled for all origins!'});
+// });
 
 // configure body parser
 app.use(bodyParser.urlencoded({ extended: true }));
