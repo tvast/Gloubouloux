@@ -1,9 +1,11 @@
-<h3>Top Bears</h3>
+<div class="container">
+  <h3>Top Bears</h3>
 <div class="grid grid-pad">
   <div *ngFor="let bear of bears" (click)="gotoDetail(bear)" class="col-1-4">
     <div >
       <h4>{{bear.name}}</h4>
       <h4>{{bear._id}}</h4>
+      <h4>{{bear.age}}</h4>
     </div>
   </div>
 </div>
@@ -13,3 +15,4 @@
 <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
 <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
 <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+</div>

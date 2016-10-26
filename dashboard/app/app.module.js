@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var form_component_1 = require('./form.component');
 var app_routing_module_1 = require('./app-routing.module');
 // import { InMemoryDataService }  from './in-memory-data.service';
 var app_component_1 = require('./app.component');
@@ -36,6 +37,7 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 bear_component_1.BearComponent,
+                form_component_1.FormComponent
             ],
             providers: [bear_service_1.BearService],
             bootstrap: [app_component_1.AppComponent]

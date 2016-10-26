@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
+import { FormComponent } from './form.component';
 import { AppRoutingModule } from './app-routing.module';
 
 // Imports for loading & configuring the in-memory web api
@@ -28,6 +29,7 @@ import { BearService }          from './bear.service';
   declarations: [
     AppComponent,
     BearComponent,
+    FormComponent
     // HeroDetailComponent,
     // HeroesComponent,
     // HeroSearchComponent
