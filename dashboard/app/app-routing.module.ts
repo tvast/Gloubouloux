@@ -14,7 +14,7 @@ import { HomeComponent }  from './home.component';
 const routes: Routes = [
   { path: '', redirectTo: '/bear', pathMatch: 'full' },
   { path: 'bear',  component: BearComponent },
-  { path: 'inscription',     component: FormComponent }
+  { path: 'inscription',     component: FormComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'home',     component: HomeComponent }
 ];
