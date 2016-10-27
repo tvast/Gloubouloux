@@ -33,6 +33,28 @@ var BearService = (function () {
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
+    // postBears() {
+    //     // return Observable<Check[]>
+    //     return this.http.post(this.bearUrl)
+    //         .map(response => <String> response.json())
+    //         .catch(this.handleError)
+    //         ;
+    // }
+    BearService.prototype.addBear = function (newBear) {
+        var body = JSON.stringify(newBear);
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post(this.bearUrl, body, options)
+            .map(function (response) { return response.text(); })
+            .catch(this.handleError);
+    };
+    //  create(name: string): Promise<Bear> {
+    //   return this.http
+    //     .post(this.bearUrl, JSON.stringify({name: name}), {headers: this.headers})
+    //     .toPromise()
+    //     .then(res => res.json().data)
+    //     .catch(this.handleError);
+    // }
     //
     // getBear(id: number): Promise<Bear> {
     //   return this.getBears()

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Headers, Http , RequestOptions } from '@angular/http';
 
 // import { Hero } from './hero';
 // import { HEROES } from './mock-heroes';
@@ -30,6 +30,32 @@ export class BearService {
           .catch(this.handleError)
           ;
   }
+
+  // postBears() {
+  //     // return Observable<Check[]>
+  //     return this.http.post(this.bearUrl)
+  //         .map(response => <String> response.json())
+  //         .catch(this.handleError)
+  //         ;
+  // }
+
+  addBear(newBear: Bear) {
+      let body = JSON.stringify(newBear);
+      let headers = new Headers({ 'Content-Type': 'application/json' });
+      let options = new RequestOptions({ headers: headers });
+
+      return this.http.post(this.bearUrl, body, options)
+          .map(response => <String> response.text())
+          .catch(this.handleError)
+          ;
+  }
+ //  create(name: string): Promise<Bear> {
+ //   return this.http
+ //     .post(this.bearUrl, JSON.stringify({name: name}), {headers: this.headers})
+ //     .toPromise()
+ //     .then(res => res.json().data)
+ //     .catch(this.handleError);
+ // }
   //
   // getBear(id: number): Promise<Bear> {
   //   return this.getBears()

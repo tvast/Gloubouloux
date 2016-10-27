@@ -8,25 +8,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-// import { DashboardComponent }   from './dashboard.component';
-// import { HeroesComponent }      from './heroes.component';
-// import { HeroDetailComponent }  from './hero-detail.component';
-var routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-];
-var AppRoutingModule = (function () {
-    function AppRoutingModule() {
+var core_1 = require('@angular/core');
+var HomeComponent = (function () {
+    function HomeComponent() {
+        this.title = 'Tour of Heroes';
     }
-    return AppRoutingModule;
+    HomeComponent = __decorate([
+        core_1.Component({
+            // moduleId: module.id,
+            selector: 'home',
+            templateUrl: "app/home.component.html",
+            styleUrls: ['app/style.css']
+        }), 
+        __metadata('design:paramtypes', [])
+    ], HomeComponent);
+    return HomeComponent;
 }());
-AppRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [router_1.RouterModule.forRoot(routes)],
-        exports: [router_1.RouterModule]
-    }),
-    __metadata("design:paramtypes", [])
-], AppRoutingModule);
-exports.AppRoutingModule = AppRoutingModule;
-//# sourceMappingURL=app.routing.module.js.map
+exports.HomeComponent = HomeComponent;
+//# sourceMappingURL=home.component.js.map

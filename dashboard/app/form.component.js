@@ -33,18 +33,13 @@ var FormComponent = (function () {
     FormComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.bearService.getBears2().subscribe(function (bears) { return _this.bears = bears; });
-        this.loadBears();
+        // this.loadBears();
     };
     FormComponent.prototype.newHero = function () {
         var _this = this;
         this.model = new bear_1.Bear();
         this.active = false;
         setTimeout(function () { return _this.active = true; }, 0);
-    };
-    FormComponent.prototype.loadBears = function () {
-        this.bearService.getBears2().subscribe(function (bears) {
-            console.log(bears);
-        });
     };
     FormComponent = __decorate([
         core_1.Component({

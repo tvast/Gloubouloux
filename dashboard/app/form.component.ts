@@ -26,7 +26,7 @@ export class FormComponent {
 
   ngOnInit(): void {
     this.bearService.getBears2().subscribe(bears => this.bears = bears);
-    this.loadBears();
+    // this.loadBears();
   }
 
   newHero() {
@@ -35,16 +35,18 @@ export class FormComponent {
    setTimeout(() => this.active = true, 0);
  }
 
-  loadBears() {
+  // loadBears() {
+  //
+  //   this.bearService.getBears2().subscribe(
+  //     bears => {
+  //       console.log(bears)
+  //
+  //     }
+  //     // ,error => {
+  //     //   this.errorMessage = this._errorMappingService.getMessage(<any>error);
+  //     // }
+  //   );
+  // }
 
-    this.bearService.getBears2().subscribe(
-      bears => {
-        console.log(bears)
 
-      }
-      // ,error => {
-      //   this.errorMessage = this._errorMappingService.getMessage(<any>error);
-      // }
-    );
-  }
 }

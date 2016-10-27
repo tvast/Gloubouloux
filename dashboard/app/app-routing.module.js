@@ -14,9 +14,14 @@ var router_1 = require('@angular/router');
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
 var bear_component_1 = require('./bear.component');
+var form_component_1 = require('./form.component');
+var home_component_1 = require('./home.component');
 var routes = [
     { path: '', redirectTo: '/bear', pathMatch: 'full' },
     { path: 'bear', component: bear_component_1.BearComponent },
+    { path: 'inscription', component: form_component_1.FormComponent },
+    // { path: 'detail/:id', component: HeroDetailComponent },
+    { path: 'home', component: home_component_1.HomeComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
