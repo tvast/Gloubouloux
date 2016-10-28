@@ -19,11 +19,11 @@ var BearComponent = (function () {
     }
     BearComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.bearService.getBears2().subscribe(function (bears) { return _this.bears = bears; });
+        this.bearService.getBears().subscribe(function (bears) { return _this.bears = bears; });
         this.loadBears();
     };
     BearComponent.prototype.loadBears = function () {
-        this.bearService.getBears2().subscribe(function (bears) {
+        this.bearService.getBears().subscribe(function (bears) {
             console.log(bears);
         });
     };

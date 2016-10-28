@@ -9,15 +9,15 @@
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Nom</label>
       <div class="col-lg-10">
-        <input  name="name"
-        type="text" class="form-control" id="inputEmail" placeholder="Nom">
+        <input  name="name" [(ngModel)]="bear.name"
+        type="text" class="form-control" id="inputEmail" placeholder="Nom"/>
       </div>
     </div>
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Age</label>
       <div class="col-lg-10">
-        <input  name="age"
-        type="number" class="form-control" id="inputPassword" placeholder="Password">
+        <input  name="age" [(ngModel)]="bear.age"
+        type="number" class="form-control" id="inputPassword" placeholder="Password"/>
         <!-- <div class="checkbox">
           <label>
             <input type="checkbox"> Checkbox
@@ -25,6 +25,7 @@
         </div> -->
       </div>
     </div>
+    info : {{bear.age+''+bear.name}}
     <!-- <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">Textarea</label>
       <div class="col-lg-10">

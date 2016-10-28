@@ -18,28 +18,14 @@ var FormComponent = (function () {
         this.bearService = bearService;
         this.bears = [];
         this.active = true;
-        this.powers = ['Really Smart', 'Super Flexible',
-            'Super Hot', 'Weather Changer'];
-        this.model = new bear_1.Bear();
+        this.bear = new bear_1.Bear();
         this.submitted = false;
     }
     FormComponent.prototype.onSubmit = function () { this.submitted = true; };
-    Object.defineProperty(FormComponent.prototype, "diagnostic", {
-        // TODO: Remove this when we're done
-        get: function () { return JSON.stringify(this.model); },
-        enumerable: true,
-        configurable: true
-    });
     FormComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.bearService.getBears2().subscribe(function (bears) { return _this.bears = bears; });
-        // this.loadBears();
     };
-    FormComponent.prototype.newHero = function () {
-        var _this = this;
-        this.model = new bear_1.Bear();
-        this.active = false;
-        setTimeout(function () { return _this.active = true; }, 0);
+    FormComponent.prototype.saveBear = function () {
+        this.bearService.addBear(this.bear).subscribe(this.router.navigate(['home']));
     };
     FormComponent = __decorate([
         core_1.Component({

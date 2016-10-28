@@ -10,8 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
-// import { Hero } from './hero';
-// import { HEROES } from './mock-heroes';
 require('rxjs/add/operator/toPromise');
 require('rxjs/add/operator/map');
 require('rxjs/Rx');
@@ -19,29 +17,16 @@ var BearService = (function () {
     function BearService(http) {
         this.http = http;
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
-        this.bearUrl = 'http://localhost:8080/api/bears'; // URL to web api
+        this.bearUrl = 'http://localhost:8081/api/bears'; // URL to web api
     }
-    // getBears(): Promise<Bear[]> {
-    //   return this.http.get(this.bearUrl)
-    //              .toPromise()
-    //              .then(response => response.json().data as Bear[])
-    //              .catch(this.handleError);
-    // }
-    BearService.prototype.getBears2 = function () {
+    BearService.prototype.getBears = function () {
         // return Observable<Check[]>
         return this.http.get(this.bearUrl)
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
-    // postBears() {
-    //     // return Observable<Check[]>
-    //     return this.http.post(this.bearUrl)
-    //         .map(response => <String> response.json())
-    //         .catch(this.handleError)
-    //         ;
-    // }
-    BearService.prototype.addBear = function (newBear) {
-        var body = JSON.stringify(newBear);
+    BearService.prototype.addBear = function (bear) {
+        var body = JSON.stringify(bear);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
         return this.http.post(this.bearUrl, body, options)
@@ -96,9 +81,4 @@ var BearService = (function () {
     return BearService;
 }());
 exports.BearService = BearService;
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
 //# sourceMappingURL=bear.service.js.map

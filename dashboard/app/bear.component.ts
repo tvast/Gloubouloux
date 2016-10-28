@@ -19,13 +19,13 @@ export class BearComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.bearService.getBears2().subscribe(bears => this.bears = bears);
+    this.bearService.getBears().subscribe(bears => this.bears = bears);
     this.loadBears();
   }
 
   loadBears() {
 
-    this.bearService.getBears2().subscribe(
+    this.bearService.getBears().subscribe(
       bears => {
         console.log(bears)
 

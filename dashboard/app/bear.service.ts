@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http , RequestOptions } from '@angular/http';
 
-// import { Hero } from './hero';
-// import { HEROES } from './mock-heroes';
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
@@ -12,18 +10,11 @@ import { Bear} from './bear';
 export class BearService {
 
   private headers = new Headers({'Content-Type': 'application/json'});
-  private bearUrl = 'http://localhost:8080/api/bears';  // URL to web api
+  private bearUrl = 'http://localhost:8081/api/bears';  // URL to web api
 
   constructor(private http: Http) { }
 
-  // getBears(): Promise<Bear[]> {
-  //   return this.http.get(this.bearUrl)
-  //              .toPromise()
-  //              .then(response => response.json().data as Bear[])
-  //              .catch(this.handleError);
-  // }
-
-  getBears2() {
+  getBears() {
       // return Observable<Check[]>
       return this.http.get(this.bearUrl)
           .map(response => <Bear[]> response.json())
@@ -31,16 +22,8 @@ export class BearService {
           ;
   }
 
-  // postBears() {
-  //     // return Observable<Check[]>
-  //     return this.http.post(this.bearUrl)
-  //         .map(response => <String> response.json())
-  //         .catch(this.handleError)
-  //         ;
-  // }
-
-  addBear(newBear: Bear) {
-      let body = JSON.stringify(newBear);
+  addBear(bear: Bear) {
+      let body = JSON.stringify(bear);
       let headers = new Headers({ 'Content-Type': 'application/json' });
       let options = new RequestOptions({ headers: headers });
 
@@ -92,10 +75,3 @@ export class BearService {
     return Promise.reject(error.message || error);
   }
 }
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
