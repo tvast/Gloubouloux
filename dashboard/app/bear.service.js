@@ -22,57 +22,25 @@ var BearService = (function () {
     BearService.prototype.getBears = function () {
         // return Observable<Check[]>
         return this.http.get(this.bearUrl)
-            .map(function (response) { return response.json(); })
-            .catch(this.handleError);
+            .map(function (response) { return response.json(); });
     };
     BearService.prototype.addBear = function (bear) {
         var body = JSON.stringify(bear);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
         return this.http.post(this.bearUrl, body, options)
-            .map(function (response) { return response.text(); })
-            .catch(this.handleError);
+            .map(function (response) { return response.text(); });
     };
-    //  create(name: string): Promise<Bear> {
-    //   return this.http
-    //     .post(this.bearUrl, JSON.stringify({name: name}), {headers: this.headers})
-    //     .toPromise()
-    //     .then(res => res.json().data)
-    //     .catch(this.handleError);
-    // }
+    // getBear(id: number): <Bear> {
+    //   // let bear : any
     //
-    // getBear(id: number): Promise<Bear> {
     //   return this.getBears()
-    //              .then(bears => bears.find(bear => bear.id === id));
+    //   .then(bears => bears.find(bear => bear.id === id));
     // }
-    //
-    // delete(id: number): Promise<void> {
-    //   const url = `${this.bearUrl}/${id}`;
-    //   return this.http.delete(url, {headers: this.headers})
-    //     .toPromise()
-    //     .then(() => null)
-    //     .catch(this.handleError);
-    // }
-    //
-    // create(name: string): Promise<Bear> {
-    //   return this.http
-    //     .post(this.bearUrl, JSON.stringify({name: name}), {headers: this.headers})
-    //     .toPromise()
-    //     .then(res => res.json().data)
-    //     .catch(this.handleError);
-    // }
-    //
-    // update(bear: Bear): Promise<Bear> {
-    //   const url = `${this.bearUrl}/${bear.id}`;
-    //   return this.http
-    //     .put(url, JSON.stringify(bear), {headers: this.headers})
-    //     .toPromise()
-    //     .then(() => bear)
-    //     .catch(this.handleError);
-    // }
-    BearService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
+    BearService.prototype.getBear = function (id) {
+        // return Observable<Check>
+        return this.http.get(this.bearUrl + "/bear/" + id)
+            .map(function (response) { return response.json(); });
     };
     BearService = __decorate([
         core_1.Injectable(), 

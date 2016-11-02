@@ -27,10 +27,6 @@ var BearComponent = (function () {
             console.log(bears);
         });
     };
-    BearComponent.prototype.gotoDetail = function (bear) {
-        var link = ['/detail', bear.id];
-        this.router.navigate(link);
-    };
     BearComponent = __decorate([
         core_1.Component({
             // moduleId: module.id,

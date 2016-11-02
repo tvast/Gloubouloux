@@ -16,28 +16,25 @@ export class BearComponent implements OnInit {
   constructor(
     private router: Router,
     private bearService: BearService) {
+    }
+
+    ngOnInit(): void {
+      this.bearService.getBears().subscribe(bears => this.bears = bears);
+      this.loadBears();
+    }
+
+    loadBears() {
+
+      this.bearService.getBears().subscribe(
+        bears => {
+          console.log(bears)
+
+        }
+      );
+    }
+
+    // gotoDetail(bear: Bear): void {
+    //   let link = ['/beardetail', bear.id];
+    //   this.router.navigate(link);
+    // }
   }
-
-  ngOnInit(): void {
-    this.bearService.getBears().subscribe(bears => this.bears = bears);
-    this.loadBears();
-  }
-
-  loadBears() {
-
-    this.bearService.getBears().subscribe(
-      bears => {
-        console.log(bears)
-
-      }
-      // ,error => {
-      //   this.errorMessage = this._errorMappingService.getMessage(<any>error);
-      // }
-    );
-  }
-
-  gotoDetail(bear: Bear): void {
-    let link = ['/detail', bear.id];
-    this.router.navigate(link);
-  }
-}

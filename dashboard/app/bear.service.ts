@@ -15,30 +15,44 @@ export class BearService {
   constructor(private http: Http) { }
 
   getBears() {
-      // return Observable<Check[]>
-      return this.http.get(this.bearUrl)
-          .map(response => <Bear[]> response.json())
-          .catch(this.handleError)
-          ;
+    // return Observable<Check[]>
+    return this.http.get(this.bearUrl)
+    .map(response => <Bear[]> response.json())
+    // .catch(this.handleError)
+    ;
   }
 
   addBear(bear: Bear) {
-      let body = JSON.stringify(bear);
-      let headers = new Headers({ 'Content-Type': 'application/json' });
-      let options = new RequestOptions({ headers: headers });
+    let body = JSON.stringify(bear);
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
 
-      return this.http.post(this.bearUrl, body, options)
-          .map(response => <String> response.text())
-          .catch(this.handleError)
+    return this.http.post(this.bearUrl, body, options)
+    .map(response => <String> response.text())
+    // .catch(this.handleError)
+    ;
+  }
+
+  // getBear(id: number): <Bear> {
+  //   // let bear : any
+  //
+  //   return this.getBears()
+  //   .then(bears => bears.find(bear => bear.id === id));
+  // }
+  getBear(id: number) {
+      // return Observable<Check>
+      return this.http.get(this.bearUrl + "/bear/" + id)
+          .map(response => <String> response.json())
+          // .catch(this.handleError)
           ;
   }
- //  create(name: string): Promise<Bear> {
- //   return this.http
- //     .post(this.bearUrl, JSON.stringify({name: name}), {headers: this.headers})
- //     .toPromise()
- //     .then(res => res.json().data)
- //     .catch(this.handleError);
- // }
+  //  create(name: string): Promise<Bear> {
+  //   return this.http
+  //     .post(this.bearUrl, JSON.stringify({name: name}), {headers: this.headers})
+  //     .toPromise()
+  //     .then(res => res.json().data)
+  //     .catch(this.handleError);
+  // }
   //
   // getBear(id: number): Promise<Bear> {
   //   return this.getBears()
@@ -70,8 +84,8 @@ export class BearService {
   //     .catch(this.handleError);
   // }
 
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
-    return Promise.reject(error.message || error);
-  }
+  // private handleError(error: any): Promise<any> {
+  //   console.error('An error occurred', error); // for demo purposes only
+  //   return Promise.reject(error.message || error);
+  // }
 }
