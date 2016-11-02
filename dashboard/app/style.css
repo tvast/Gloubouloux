@@ -1,3 +1,14 @@
+nav {
+  /*position: fixed;*/
+  width:100%;
+   height:50px;
+   display:block;
+   position:fixed;
+   top:0;
+   left:0;
+   z-index: 1000;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -10,6 +21,7 @@ header {
   background-image: url('./app/img/header.jpg');
   text-align: center;
   color: white;
+
 }
 header .header-content {
   position: relative;

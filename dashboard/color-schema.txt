@@ -1,0 +1,7 @@
+jaune : #FF9E00
+
+bleu : #106BE0
+
+rouge : #FF472C
+
+white : #fafafa

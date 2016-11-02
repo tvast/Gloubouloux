@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script>document.write('<base href="' + document.location + '" />');</script>
-    <title>Trocart</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <title>Trocart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="styleloader.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css">
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="styleloader.css" rel="stylesheet" type="text/css">
 
-    <!-- Polyfill(s) for older browsers -->
-    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+  <!-- Polyfill(s) for older browsers -->
+  <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
 
-    <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
-    <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
-    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+  <script src="https://unpkg.com/zone.js@0.6.25?main=browser"></script>
+  <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+  <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
 
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('app').catch(function(err){ console.error(err); });
-    </script>
-  </head>
+  <script src="systemjs.config.js"></script>
+  <script>
+  System.import('app').catch(function(err){ console.error(err); });
+  </script>
+</head>
 
-  <body>
-    <my-app>
-      <div class="loading">
-          <h1>Loading...</h1>
-          <div class="loader"></div>
+<body>
+  <my-app>
+    <div class="loading">
+
+      <!-- <div class="loader"></div> -->
+      <div class="circle-loader">
+        <div class="circle-line">
+          <div class="circle circle-blue"></div>
+          <div class="circle circle-blue"></div>
+          <div class="circle circle-blue"></div>
+        </div>
+        <div class="circle-line">
+          <div class="circle circle-yellow"></div>
+          <div class="circle circle-yellow"></div>
+          <div class="circle circle-yellow"></div>
+        </div>
+        <div class="circle-line">
+          <div class="circle circle-red"></div>
+          <div class="circle circle-red"></div>
+          <div class="circle circle-red"></div>
+        </div>
+        <div class="circle-line">
+          <div class="circle circle-green"></div>
+          <div class="circle circle-green"></div>
+          <div class="circle circle-green"></div>
+        </div>
       </div>
-    </my-app>
+      <!-- <h1 id="loading">Loading...</h1> -->
+    </div>
+  </my-app>
 
-  </body>
+</body>
 </html>
