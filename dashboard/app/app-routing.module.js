@@ -23,7 +23,7 @@ var routes = [
     { path: 'inscription', component: form_component_1.FormComponent },
     // { path: 'detail/:id', component: HeroDetailComponent },
     { path: 'home', component: home_component_1.HomeComponent },
-    { path: 'beardetail/:id', component: bear_detail_component_1.BearDetailComponent }
+    { path: 'bear/:id', component: bear_detail_component_1.BearDetailComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
