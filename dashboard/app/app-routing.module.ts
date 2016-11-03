@@ -7,7 +7,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { BearComponent }  from './bear.component';
 import { FormComponent }  from './form.component';
 import { HomeComponent }  from './home.component';
-// import { BearDetailComponent }  from './bear-detail.component';
+import { BearDetailComponent }  from './bear-detail.component';
 
 
 
@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'inscription',     component: FormComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'home', component: HomeComponent },
-  // { path: 'beardetail', component: BearDetailComponent }
+  { path: 'beardetail/:id', component: BearDetailComponent }
 ];
 
 @NgModule({

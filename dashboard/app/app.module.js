@@ -18,7 +18,7 @@ var app_routing_module_1 = require('./app-routing.module');
 var app_component_1 = require('./app.component');
 var bear_component_1 = require('./bear.component');
 var home_component_1 = require('./home.component');
-// import { BearDetailComponent }  from './bear-detail.component';
+var bear_detail_component_1 = require('./bear-detail.component');
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
 // import { HeroService }          from './hero.service';
@@ -41,6 +41,7 @@ var AppModule = (function () {
                 bear_component_1.BearComponent,
                 form_component_1.FormComponent,
                 home_component_1.HomeComponent,
+                bear_detail_component_1.BearDetailComponent
             ],
             providers: [bear_service_1.BearService],
             bootstrap: [app_component_1.AppComponent]

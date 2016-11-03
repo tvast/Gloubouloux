@@ -8,8 +8,8 @@ import { BearService } from './bear.service';
 @Component({
   // moduleId: module.id,
   selector: 'bear-detail',
-  templateUrl: 'bear-detail.component.html',
-  styleUrls: [ 'bear-detail.component.css' ]
+  templateUrl: 'app/bear-detail.component.html',
+  styleUrls: [ 'style.css' ]
 })
 export class BearDetailComponent implements OnInit {
 
@@ -22,11 +22,11 @@ export class BearDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.params.forEach((params: Params) => {
-      let id = +params['id'];
-      this.bearService.getBear(id)
-        // .then(bear : => this.bear = bear);
-    });
+    // this.route.params.forEach((params: Params) => {
+    //   let id = +params['id'];
+    //   this.bearService.getBear(id)
+    //     .then(bear : => this.bear = bear);
+    // });
   }
 
   // save(): void {

@@ -13,7 +13,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent }         from './app.component';
 import { BearComponent }   from './bear.component';
 import { HomeComponent }  from './home.component';
-// import { BearDetailComponent }  from './bear-detail.component';
+import { BearDetailComponent }  from './bear-detail.component';
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
 // import { HeroService }          from './hero.service';
@@ -33,7 +33,7 @@ import { BearService }          from './bear.service';
     BearComponent,
     FormComponent,
     HomeComponent,
-    // BearDetailComponent
+    BearDetailComponent
     // HeroDetailComponent,
     // HeroesComponent,
     // HeroSearchComponent
