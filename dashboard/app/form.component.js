@@ -24,9 +24,6 @@ var FormComponent = (function () {
     FormComponent.prototype.onSubmit = function () { this.submitted = true; };
     FormComponent.prototype.ngOnInit = function () {
     };
-    FormComponent.prototype.saveBear = function () {
-        this.bearService.addBear(this.bear).subscribe(this.router.navigate(['home']));
-    };
     FormComponent = __decorate([
         core_1.Component({
             // moduleId: module.id,

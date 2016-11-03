@@ -9,10 +9,6 @@ import { FormComponent }  from './form.component';
 import { HomeComponent }  from './home.component';
 import { BearDetailComponent }  from './bear-detail.component';
 
-
-
-
-
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 

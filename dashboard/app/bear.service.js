@@ -19,6 +19,7 @@ var BearService = (function () {
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.bearUrl = 'http://localhost:8081/api/bears'; // URL to web api
     }
+    // constructor(private jsonp: Jsonp) { }
     BearService.prototype.getBears = function () {
         // return Observable<Check[]>
         return this.http.get(this.bearUrl)
@@ -31,12 +32,6 @@ var BearService = (function () {
         return this.http.post(this.bearUrl, body, options)
             .map(function (response) { return response.text(); });
     };
-    // getBear(id: number): <Bear> {
-    //   // let bear : any
-    //
-    //   return this.getBears()
-    //   .then(bears => bears.find(bear => bear.id === id));
-    // }
     BearService.prototype.getBear = function (id) {
         // return Observable<Check>
         return this.http.get(this.bearUrl + "/bear/" + id)

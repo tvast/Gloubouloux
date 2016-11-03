@@ -20,12 +20,8 @@ var BearComponent = (function () {
     BearComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.bearService.getBears().subscribe(function (bears) { return _this.bears = bears; });
-        this.loadBears();
-    };
-    BearComponent.prototype.loadBears = function () {
-        this.bearService.getBears().subscribe(function (bears) {
-            console.log(bears);
-        });
+        // console.log(bears)
+        // this.loadBears();
     };
     BearComponent = __decorate([
         core_1.Component({
