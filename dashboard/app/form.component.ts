@@ -23,14 +23,14 @@ export class FormComponent {
   ngOnInit(): void {
   }
 
- // saveBear() {
- //   this.bearService.addBear(this.bear).subscribe(
- //     this.router.navigate(['home']),
- //    //  error => {
- //    //    this.errorMessage = this._errorMappingService.getMessage(<any>error);
- //    //  }
- //   );
- // }
+ saveBear() {
+   this.bearService.addBear(this.bear).subscribe(
+     this.router.navigate(['home']),
+    //  error => {
+    //    this.errorMessage = this._errorMappingService.getMessage(<any>error);
+    //  }
+   );
+ }
 
 
 }

@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'inscription',     component: FormComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'beardetail/:id', component: BearDetailComponent }
+  { path: 'bear/:id', component: BearDetailComponent }
 ];
 
 @NgModule({
