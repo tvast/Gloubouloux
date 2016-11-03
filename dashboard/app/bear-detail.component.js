@@ -8,10 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var common_1 = require("@angular/common");
-var bear_service_1 = require("./bear.service");
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var common_1 = require('@angular/common');
+var bear_service_1 = require('./bear.service');
 var BearDetailComponent = (function () {
     function BearDetailComponent(bearService, route, location) {
         this.bearService = bearService;
@@ -32,19 +32,17 @@ var BearDetailComponent = (function () {
     BearDetailComponent.prototype.goBack = function () {
         this.location.back();
     };
+    BearDetailComponent = __decorate([
+        core_1.Component({
+            // moduleId: module.id,
+            selector: 'bear-detail',
+            templateUrl: 'app/bear-detail.component.html',
+            styleUrls: ['style.css']
+        }), 
+        __metadata('design:paramtypes', [bear_service_1.BearService, router_1.ActivatedRoute, common_1.Location])
+    ], BearDetailComponent);
     return BearDetailComponent;
 }());
-BearDetailComponent = __decorate([
-    core_1.Component({
-        // moduleId: module.id,
-        selector: 'bear-detail',
-        templateUrl: 'app/bear-detail.component.html',
-        styleUrls: ['style.css']
-    }),
-    __metadata("design:paramtypes", [bear_service_1.BearService,
-        router_1.ActivatedRoute,
-        common_1.Location])
-], BearDetailComponent);
 exports.BearDetailComponent = BearDetailComponent;
 /*
 Copyright 2016 Google Inc. All Rights Reserved.
