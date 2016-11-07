@@ -1,20 +1,10 @@
 export class Bear {
   name:    string;
   photo:    string;
+  photo2: string;
   description:    string;
-  id : number
-  // amis: [];
-  // message:[];
-  age:     { type: Number; min: 18; max: 65 };
-  // updated: { type: Date; default: date.now };
+  id : number;
+  age: number;
+  // { type: Number; min: 18; max: 65 };
+
 }
-// var BearSchema = new Schema({
-//   name:    String;
-// 	photo:    String;
-// 	description:    String;
-// 	amis: [];
-// 	message:[];
-//   age:     { type: Number; min: 18; max: 65 };
-// 	updated: { type: Date; default: Date.now };
-//
-// });
