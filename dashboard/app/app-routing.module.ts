@@ -8,11 +8,13 @@ import { BearComponent }  from './bear.component';
 import { FormComponent }  from './form.component';
 import { HomeComponent }  from './home.component';
 import { BearDetailComponent }  from './bear-detail.component';
+import { LandingPageComponent }  from './landingpage.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
 
   { path: 'bear',  component: BearComponent },
+  { path: 'landingpage',  component: LandingPageComponent },
   { path: 'inscription',     component: FormComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'home', component: HomeComponent },

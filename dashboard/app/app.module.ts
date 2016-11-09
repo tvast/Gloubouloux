@@ -14,6 +14,10 @@ import { AppComponent }         from './app.component';
 import { BearComponent }   from './bear.component';
 import { HomeComponent }  from './home.component';
 import { BearDetailComponent }  from './bear-detail.component';
+
+import { LandingPageComponent }  from './landingpage.component';
+
+
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
 // import { HeroService }          from './hero.service';
@@ -33,7 +37,8 @@ import { BearService }          from './bear.service';
     BearComponent,
     FormComponent,
     HomeComponent,
-    BearDetailComponent
+    BearDetailComponent,
+    LandingPageComponent
     // HeroDetailComponent,
     // HeroesComponent,
     // HeroSearchComponent
