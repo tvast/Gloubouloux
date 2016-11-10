@@ -1,13 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
-html,
-body {
-  height: 100%;
-  width : 100%;
+
+/*Glitch effec*/
+.glitch-wrapper {
+  background-color: black;
 }
-body {
-  background: black;
-  font-family: 'Archivo Black', sans-serif;
-}
+
 .glitch-wrapper {
   font-family: 'Nosifer', cursive;
   height: 100%;
