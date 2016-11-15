@@ -18,6 +18,7 @@ var form_component_1 = require('./form.component');
 var home_component_1 = require('./home.component');
 var bear_detail_component_1 = require('./bear-detail.component');
 var landingpage_component_1 = require('./landingpage.component');
+var visucanvas_component_1 = require('./visucanvas.component');
 var routes = [
     { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
     { path: 'bear', component: bear_component_1.BearComponent },
@@ -25,6 +26,7 @@ var routes = [
     { path: 'inscription', component: form_component_1.FormComponent },
     // { path: 'detail/:id', component: HeroDetailComponent },
     { path: 'home', component: home_component_1.HomeComponent },
+    { path: 'visucanva', component: visucanvas_component_1.visucanvasComponent },
     { path: 'bear/:id', component: bear_detail_component_1.BearDetailComponent }
 ];
 var AppRoutingModule = (function () {

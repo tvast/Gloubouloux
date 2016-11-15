@@ -9,6 +9,7 @@ import { FormComponent }  from './form.component';
 import { HomeComponent }  from './home.component';
 import { BearDetailComponent }  from './bear-detail.component';
 import { LandingPageComponent }  from './landingpage.component';
+import { visucanvasComponent }  from './visucanvas.component'; 
 
 const routes: Routes = [
   { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'inscription',     component: FormComponent },
   // { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'home', component: HomeComponent },
+  { path: 'visucanva', component: visucanvasComponent },
   { path: 'bear/:id', component: BearDetailComponent }
 ];
 
