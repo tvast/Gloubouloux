@@ -18,7 +18,6 @@ var BearDetailComponent = (function () {
         this.bearService = bearService;
         this.route = route;
         this.location = location;
-        this.bears = [];
     }
     // Set a new event in the store with a given ID
     // as key
@@ -27,8 +26,17 @@ var BearDetailComponent = (function () {
             this._emitters[ID] = new core_2.EventEmitter();
         return this._emitters[ID];
     };
+    // Load data ones componet is ready
     BearDetailComponent.prototype.ngOnInit = function () {
-        // this.bearService.getAllBears()
+        var _this = this;
+        // Subscribe to route params
+        this.sub = this.route.params.subscribe(function (params) {
+            var id = params['id'];
+            // Retrieve Pet with Id route param
+            _this.bearService.findBearById(id).subscribe(function (bear) { return _this.bear = bear; });
+            console.log(id);
+            console.log(_this.bear);
+        });
     };
     BearDetailComponent.prototype.loadBear = function (ID) {
         var _this = this;
@@ -48,7 +56,7 @@ var BearDetailComponent = (function () {
             // moduleId: module.id,
             selector: 'bear-detail',
             templateUrl: 'app/bear-detail.component.html',
-            styleUrls: ['style.css']
+            styleUrls: ['style.css'],
         }), 
         __metadata('design:paramtypes', [bear_service_1.BearService, router_1.ActivatedRoute, common_1.Location])
     ], BearDetailComponent);

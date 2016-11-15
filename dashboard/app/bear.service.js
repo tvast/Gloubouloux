@@ -21,6 +21,9 @@ var BearService = (function () {
         this.bearUrl = 'http://localhost:8081/api/bears'; // URL to web api
     }
     // constructor(private jsonp: Jsonp) { }
+    BearService.prototype.ngOnInit = function () {
+        console.log(this.findBearById(id));
+    };
     BearService.prototype.getBears = function () {
         // return Observable<Check[]>
         return this.http.get(this.bearUrl)
@@ -40,6 +43,23 @@ var BearService = (function () {
         return this.http.post(this.bearUrl, body, options) // ...using post request
             .map(function (res) { return res.json(); }) // ...and calling .json() on the response to return data
             .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); }); //...errors if any
+    };
+    BearService.prototype.findBearById = function (id) {
+        // End point for list of pets:
+        // http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
+        var endPoint = 'get';
+        // URLSearchParams makes it easier to set query parameters and construct URL
+        // rather than manually concatinatng
+        var params = new http_1.URLSearchParams();
+        // params.set('key', '555f8155d42d5c9be4705beaf4cce089');
+        params.set('id', id);
+        // params.set('format', 'json');
+        // params.set('callback', 'JSONP_CALLBACK');
+        console.log(id);
+        // Return response
+        return this.http
+            .get(this.bearUrl + '/' + id)
+            .map(function (res) { return res.json(); });
     };
     // Update a comment
     BearService.prototype.updateBear = function (body) {

@@ -3,6 +3,8 @@ import {Injectable, EventEmitter} from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 
+import { Observable } from 'rxjs/Observable';
+
 import { Bear }        from './bear';
 import { BearService } from './bear.service';
 
@@ -10,11 +12,13 @@ import { BearService } from './bear.service';
   // moduleId: module.id,
   selector: 'bear-detail',
   templateUrl: 'app/bear-detail.component.html',
-  styleUrls: [ 'style.css' ]
+  styleUrls: [ 'style.css' ],
 })
 export class BearDetailComponent implements OnInit {
 
-  bears: Bear[] = [];
+  // bear: Bear[] = [];
+  private sub:any;
+  private bear: Bear;
 
   constructor(
     private bearService: BearService,
@@ -31,8 +35,16 @@ export class BearDetailComponent implements OnInit {
     return this._emitters[ID];
   }
 
-  ngOnInit(): void {
-    // this.bearService.getAllBears()
+  // Load data ones componet is ready
+  ngOnInit() {
+      // Subscribe to route params
+      this.sub = this.route.params.subscribe(params => {
+        let id = params['id'];
+       // Retrieve Pet with Id route param
+        this.bearService.findBearById(id).subscribe(bear => this.bear = bear);
+        console.log(id)
+        console.log(this.bear)
+    });
   }
 
   loadBear(ID: string) {

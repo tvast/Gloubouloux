@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {  URLSearchParams , Headers, Http , Response , RequestOptions } from '@angular/http';
+import {  Jsonp , URLSearchParams , Headers, Http , Response , RequestOptions } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
@@ -19,7 +19,9 @@ export class BearService {
     // private jsonp: Jsonp
   ) { }
   // constructor(private jsonp: Jsonp) { }
-
+   ngOnInit() {
+     console.log(this.findBearById(id))
+   }
   getBears() {
     // return Observable<Check[]>
     return this.http.get(this.bearUrl)
@@ -49,6 +51,24 @@ export class BearService {
     .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
 
+  findBearById(id: string) : Observable<Bear> {
+    // End point for list of pets:
+    // http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
+    const endPoint = 'get'
+    // URLSearchParams makes it easier to set query parameters and construct URL
+    // rather than manually concatinatng
+    let params = new URLSearchParams();
+    // params.set('key', '555f8155d42d5c9be4705beaf4cce089');
+    params.set('id', id);
+    // params.set('format', 'json');
+    // params.set('callback', 'JSONP_CALLBACK');
+    console.log(id);
+    // Return response
+    return this.http
+    .get(this.bearUrl+'/'+id)
+    .map((res: Response) => res.json());
+  }
+
   // Update a comment
   updateBear (body: Object): Observable<Bear[]> {
     let bodyString = JSON.stringify(body); // Stringify payload
@@ -65,5 +85,7 @@ export class BearService {
     .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
     .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
+
+
 
 }
