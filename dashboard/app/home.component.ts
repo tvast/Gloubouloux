@@ -1,5 +1,6 @@
 import { Component }          from '@angular/core';
 
+
 @Component({
   // moduleId: module.id,
   selector: 'home',
@@ -7,5 +8,9 @@ import { Component }          from '@angular/core';
   styleUrls: ['app/home-style.css']
 })
 export class HomeComponent {
-  title = 'Tour of Heroes';
+  // title = 'Tour of Heroes';
+
+	ngOnInit () {
+
+	}
 }
