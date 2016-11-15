@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
-import {  URLSearchParams , Headers, Http , RequestOptions } from '@angular/http';
+import {  URLSearchParams , Headers, Http , Response , RequestOptions } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
+
+import {Observable} from 'rxjs/Rx';
 import { Bear} from './bear';
 
 @Injectable()
@@ -26,63 +28,42 @@ export class BearService {
     ;
   }
 
-  addBear(bear: Bear) {
-    let body = JSON.stringify(bear);
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
+  getAllBears() : Observable<Bear[]>{
+    // ...using get request
+    return this.http.get(this.bearUrl)
+    // ...and calling .json() on the response to return data
+    .map((res:Response) => res.json())
+    //...errors if any
+    .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
 
-    return this.http.post(this.bearUrl, body, options)
-    .map(response => <String> response.text())
-    // .catch(this.handleError)
-    ;
   }
 
-  getBear(id: number) {
-    // return Observable<Check>
-    return this.http.get(this.bearUrl + "/bear/" + id)
-    .map(response => <String> response.json())
-    // .catch(this.handleError)
-    ;
+  // Add a new comment
+  addBear (body: Object): Observable<Bear[]> {
+    let bodyString = JSON.stringify(body); // Stringify payload
+    let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+    let options = new RequestOptions({ headers: headers }); // Create a request option
+
+    return this.http.post(this.bearUrl, body, options) // ...using post request
+    .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+    .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
   }
-// 
-//   findBears(bear : string) {
-//   // End point for list of pets:
-//   // http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
-//   const endPoint = 'pet.find'
-//   // URLSearchParams makes it easier to set query parameters and construct URL
-//   // rather than manually concatinatng
-//   let params = new URLSearchParams();
-//   params.set('key', '555f8155d42d5c9be4705beaf4cce089');
-//   params.set('location', 'texas');
-//   params.set('animal', bear);
-//   params.set('format', 'json');
-//   params.set('callback', 'JSONP_CALLBACK');
-//   // Return response
-//  return this.jsonp
-//             .get(this.bearUrl + endPoint, { search: params })
-//             .map(response => <Bear[]> response.json());
-// }
-//
-//   findBearById(id: string){
-//    // End point for list of pets:
-//    // http://api.petfinder.com/pet.find?key=[API_KEY]&animal=[ANIMAL]&format=json&location=texas
-//    const endPoint = 'bear.get'
-//    // URLSearchParams makes it easier to set query parameters and construct URL
-//    // rather than manually concatinatng
-//    let params = new URLSearchParams();
-//   //  params.set('key', '555f8155d42d5c9be4705beaf4cce089');
-//    params.set('id', id);
-//    params.set('format', 'json');
-//    params.set('callback', 'JSONP_CALLBACK');
-//    console.log(id);
-//    // Return response
-//   return this.jsonp
-//              .get(this.bearUrl + endPoint, { search: params })
-//              .map(response => {
-//
-//                console.log(response.json().petfinder.pet);
-//                return  response.json().petfinder.pet
-//              });
-//  }
+
+  // Update a comment
+  updateBear (body: Object): Observable<Bear[]> {
+    let bodyString = JSON.stringify(body); // Stringify payload
+    let headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
+    let options = new RequestOptions({ headers: headers }); // Create a request option
+
+    return this.http.put(`${this.bearUrl}/${body['id']}`, body, options) // ...using put request
+    .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+    .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  }
+  // Delete a comment
+  removeBear (id:string): Observable<Comment[]> {
+    return this.http.delete(`${this.bearUrl}/${id}`) // ...using put request
+    .map((res:Response) => res.json()) // ...and calling .json() on the response to return data
+    .catch((error:any) => Observable.throw(error.json().error || 'Server error')); //...errors if any
+  }
 
 }

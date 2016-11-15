@@ -4,8 +4,8 @@
   <h4>{{bear._id}}</h4>
   <h4>{{bear.age}}</h4>
 </div> -->
-
-<div *ngIf="hero">
+<div class="container">
+<div >
   <h2>{{bear.name}} details!</h2>
   <div>
     <label>id: </label>{{bear._id}}</div>
@@ -15,4 +15,7 @@
    </div>
   <!-- <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button> -->
+</div>
+
+<a (click)="loadBear()" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
 </div>

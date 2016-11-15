@@ -1,4 +1,5 @@
 import { Component, OnInit }      from '@angular/core';
+import {Injectable, EventEmitter} from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 
@@ -13,7 +14,7 @@ import { BearService } from './bear.service';
 })
 export class BearDetailComponent implements OnInit {
 
-  bear: Bear
+  bears: Bear[] = [];
 
   constructor(
     private bearService: BearService,
@@ -21,18 +22,29 @@ export class BearDetailComponent implements OnInit {
     private location: Location
   ) {}
 
-  ngOnInit(): void {
-    // this.route.params.forEach((params: Params) => {
-    //   let id = +params['id'];
-    //   this.bearService.getBear(id)
-    //     .then(bear : => this.bear = bear);
-    // });
+  private static _emitters: { [ID: string]: EventEmitter<any> } = {};
+  // Set a new event in the store with a given ID
+  // as key
+  static get(ID: string): EventEmitter<any> {
+    if (!this._emitters[ID])
+    this._emitters[ID] = new EventEmitter();
+    return this._emitters[ID];
   }
 
-  // save(): void {
-  //   this.bearService.update(this.hero)
-  //     .then(() => this.goBack());
-  // }
+  ngOnInit(): void {
+    // this.bearService.getAllBears()
+  }
+
+  loadBear(ID: string) {
+    let _emitters: { [ID: string]: EventEmitter<any> } = {};
+    // let ID: string = '123gaga';
+
+    this.bearService.getBears().subscribe(bears => this.bears = bears);
+    if (! _emitters[ID])
+    _emitters[ID] = new EventEmitter();
+    return _emitters[ID];
+  }
+
 
   goBack(): void {
     this.location.back();
