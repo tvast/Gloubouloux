@@ -20,7 +20,6 @@ export class BearService {
   ) { }
   // constructor(private jsonp: Jsonp) { }
    ngOnInit() {
-     console.log(this.findBearById(id))
    }
   getBears() {
     // return Observable<Check[]>

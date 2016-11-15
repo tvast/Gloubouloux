@@ -22,7 +22,6 @@ var BearService = (function () {
     }
     // constructor(private jsonp: Jsonp) { }
     BearService.prototype.ngOnInit = function () {
-        console.log(this.findBearById(id));
     };
     BearService.prototype.getBears = function () {
         // return Observable<Check[]>

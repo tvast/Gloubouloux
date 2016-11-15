@@ -38,15 +38,6 @@ var BearDetailComponent = (function () {
             console.log(_this.bear);
         });
     };
-    BearDetailComponent.prototype.loadBear = function (ID) {
-        var _this = this;
-        var _emitters = {};
-        // let ID: string = '123gaga';
-        this.bearService.getBears().subscribe(function (bears) { return _this.bears = bears; });
-        if (!_emitters[ID])
-            _emitters[ID] = new core_2.EventEmitter();
-        return _emitters[ID];
-    };
     BearDetailComponent.prototype.goBack = function () {
         this.location.back();
     };

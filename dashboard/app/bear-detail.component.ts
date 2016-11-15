@@ -47,16 +47,6 @@ export class BearDetailComponent implements OnInit {
     });
   }
 
-  loadBear(ID: string) {
-    let _emitters: { [ID: string]: EventEmitter<any> } = {};
-    // let ID: string = '123gaga';
-
-    this.bearService.getBears().subscribe(bears => this.bears = bears);
-    if (! _emitters[ID])
-    _emitters[ID] = new EventEmitter();
-    return _emitters[ID];
-  }
-
 
   goBack(): void {
     this.location.back();
