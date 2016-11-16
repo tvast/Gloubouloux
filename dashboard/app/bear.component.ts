@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
 
+import { MasonryModule } from 'angular2-masonry';
+
 import { Bear }        from './bear';
 import { BearService } from './bear.service';
 

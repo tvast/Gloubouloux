@@ -1,5 +1,5 @@
 #logo-container{
-  font-family: 'Nosifer', cursive;
+  /*font-family: 'Nosifer', cursive;*/
 }
 footer {
    position:fixed;
@@ -17,3 +17,5 @@ footer {
 .white {
   color :white;
 }
+
+/*Octane css*/

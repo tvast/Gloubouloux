@@ -15,6 +15,7 @@ var http_1 = require('@angular/http');
 var form_component_1 = require('./form.component');
 var app_routing_module_1 = require('./app-routing.module');
 // import { InMemoryDataService }  from './in-memory-data.service';
+var angular2_masonry_1 = require('angular2-masonry');
 var app_component_1 = require('./app.component');
 var bear_component_1 = require('./bear.component');
 var home_component_1 = require('./home.component');
@@ -35,7 +36,8 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 // InMemoryWebApiModule.forRoot(InMemoryDataService),
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule,
+                angular2_masonry_1.MasonryModule
             ],
             declarations: [
                 app_component_1.AppComponent,

@@ -1,7 +1,7 @@
 /**
- * System configuration for Angular samples
- * Adjust as necessary for your application needs.
- */
+* System configuration for Angular samples
+* Adjust as necessary for your application needs.
+*/
 (function (global) {
   System.config({
     paths: {
@@ -26,7 +26,10 @@
 
       // other libraries
       'rxjs':                      'npm:rxjs',
-      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+      "angular2-masonry":          "npm:angular2-masonry",
+      "masonry-layout":            "node_modules/masonry-layout/dist/masonry.pkgd.js",
+      "masonry-layout":             "npm:masonry-layout/dist/masonry.pkgd.js",
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
@@ -36,7 +39,8 @@
       },
       rxjs: {
         defaultExtension: 'js'
-      }
+      },
+      "angular2-masonry": { "defaultExtension": "js", "main": "index" }
     }
   });
 })(this);
