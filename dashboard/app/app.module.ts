@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }  from './in-memory-data.service';
 
+import { MasonryModule } from 'angular2-masonry';
+
 import { AppComponent }         from './app.component';
 import { BearComponent }   from './bear.component';
 import { HomeComponent }  from './home.component';
@@ -30,7 +32,8 @@ import { BearService }          from './bear.service';
     FormsModule,
     HttpModule,
     // InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    AppRoutingModule,
+    MasonryModule
   ],
   declarations: [
     AppComponent,
