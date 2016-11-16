@@ -12,7 +12,7 @@ import { BearService } from './bear.service';
   // moduleId: module.id,
   selector: 'bear-detail',
   templateUrl: 'app/bear-detail.component.html',
-  styleUrls: [ 'style.css' ],
+  styleUrls: [ 'app/styledetail.component.css' ],
 })
 export class BearDetailComponent implements OnInit {
 

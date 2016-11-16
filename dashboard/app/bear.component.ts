@@ -31,9 +31,9 @@ export class BearComponent implements OnInit {
       let link = ['/beardetail', bear.id];
       this.router.navigate(link);
     }
-     viewLarge () {
-       $(document).ready(function(){
-      $('.materialboxed').materialbox();
-    });
-     }
+    //  viewLarge () {
+    //    $(document).ready(function(){
+    //   $('.materialboxed').materialbox();
+    // });
+    //  }
   }

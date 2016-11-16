@@ -1,21 +1,46 @@
-<!-- <div >
-  <a (click)="gotoDetail(bear.id)">Hello</a>
-  <h4>{{bear.name}}</h4>
-  <h4>{{bear._id}}</h4>
-  <h4>{{bear.age}}</h4>
-</div> -->
-<div class="container">
-<div *ngIf="bear">
-  <h2>{{bear.name}} details!</h2>
-  <div>
-    <label>id: </label>{{bear._id}}</div>
-  <div>
-    <label>name: {{bear.name}}</label>
-    <input [(ngModel)]="bear.name" placeholder="name" />
-   </div>
-  <!-- <button (click)="goBack()">Back</button>
-  <button (click)="save()">Save</button> -->
-</div>
+<!-- <div class="container">
+  <div *ngIf="bear">
+    <h2>{{bear.name}} details!</h2>
+    <div>
+      <label>id: </label>{{bear._id}}</div>
+      <div>
+        <label>name: {{bear.name}}</label>
+        <input [(ngModel)]="bear.name" placeholder="name" />
+      </div>
+       <button (click)="goBack()">Back</button>
+      <button (click)="save()">Save</button> -->
+    <!-- </div> -->
 
-<a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-</div>
+
+  <!-- </div> -->
+
+<div class="container">
+  <div class="row" *ngIf="bear">
+       <div class="col s12 m7">
+         <div class="card">
+           <div class="card-image">
+             <img src="{{bear.photo}}">
+             <span class="card-title">{{bear.name}} details!</span>
+           </div>
+           <div class="card-content">
+             <div>
+               <label>Id: </label>{{bear._id}}<br>
+               <label>Age: </label>{{bear.age}}<br>
+               <label>Description: </label>{{bear.description}}<br>
+             </div>
+           </div>
+           <div class="card-action">
+             <a href="#">This is a link</a>
+             <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+<!--
+  photo:    string;
+  photo2: string;
+  description:    string;
+
+  age: number; -->
