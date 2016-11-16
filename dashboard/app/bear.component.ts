@@ -10,10 +10,11 @@ import { BearService } from './bear.service';
   // moduleId: module.id,
   selector: 'my-dashboard',
   templateUrl: 'app/bear.component.html',
-  // styleUrls: [ 'dashboard.component.css' ]
+  styleUrls: [ 'app/bear.component.css' ]
 })
 export class BearComponent implements OnInit {
   bears: Bear[] = [];
+  $ : any;
 
   constructor(
     private router: Router,
@@ -30,4 +31,9 @@ export class BearComponent implements OnInit {
       let link = ['/beardetail', bear.id];
       this.router.navigate(link);
     }
+     viewLarge () {
+       $(document).ready(function(){
+      $('.materialboxed').materialbox();
+    });
+     }
   }
