@@ -2,6 +2,7 @@
 // =============================================================================
 // TUTO : https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4
 // call the packages we need
+
 var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
@@ -56,17 +57,16 @@ router.route('/bears')
 		var bear = new Bear();		// create a new instance of the Bear model
 		bear.name = req.body.name;  // set the bears name (comes from the request)
 		bear.age = req.body.age;
-		bear.photo = req.body.photo;
-		bear.description = req.body.description
+		bear.cover = req.body.cover;
+		bear.description = req.body.description;
+		bear.profilePic = req.body.profilePic;
+		bear.profilePic = req.body.profilePic;
+		bear.infos = req.body.infos;
+		bear.sounds = req.body.sounds;
+		bear.amis = req.body.amis;
+		bear.message = req.body.message;
+		bear.gigs = req.body.gigs;
 
-
-		// name:    String,
-		// photo:    String,
-		// description:    String,
-		// amis: [],
-		// message[],
-		// age:     { type: Number, min: 18, max: 65 },
-		// updated: { type: Date, default: Date.now },
 
 		bear.save(function(err) {
 			if (err)

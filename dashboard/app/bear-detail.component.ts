@@ -8,6 +8,8 @@ import { Observable } from 'rxjs/Observable';
 import { Bear }        from './bear';
 import { BearService } from './bear.service';
 
+import { Router }            from '@angular/router';
+
 @Component({
   // moduleId: module.id,
   selector: 'bear-detail',
@@ -19,19 +21,20 @@ export class BearDetailComponent implements OnInit {
   // bear: Bear[] = [];
   private sub:any;
   private bear: Bear;
+  private router: Router,
 
   constructor(
     private bearService: BearService,
     private route: ActivatedRoute,
     private location: Location
-  ) {}
+    ) {}
 
   private static _emitters: { [ID: string]: EventEmitter<any> } = {};
   // Set a new event in the store with a given ID
   // as key
   static get(ID: string): EventEmitter<any> {
     if (!this._emitters[ID])
-    this._emitters[ID] = new EventEmitter();
+      this._emitters[ID] = new EventEmitter();
     return this._emitters[ID];
   }
 
@@ -41,17 +44,29 @@ export class BearDetailComponent implements OnInit {
       this.sub = this.route.params.subscribe(params => {
         let id = params['id'];
        // Retrieve Pet with Id route param
-        this.bearService.findBearById(id).subscribe(bear => this.bear = bear);
-        console.log(id)
-        console.log(this.bear)
-    });
-  }
+       this.bearService.findBearById(id).subscribe(bear => this.bear = bear);
+       console.log(id)
+       console.log(this.bear)
+     });
+    }  
+
+    destroy (bear) {
+      this.sub = this.route.params.subscribe(params => {
+        let id = params['id'];
+       // Retrieve Pet with Id route param
+       this.bearService.deleteBear(id).subscribe(bear => this.bear = bear);
+     });
+      // let link = ['/bear'];
+      // this.router.navigate(link);
+      this.location.back();
+      
+    }
 
 
-  goBack(): void {
-    this.location.back();
+    goBack(): void {
+      this.location.back();
+    }
   }
-}
 
 
 /*

@@ -3,40 +3,68 @@
 
 <form *ngIf="active"
       (ngSubmit)="onSubmit()"
-       class="form-horizontal">
+       class="form-horizontal ">
   <fieldset>
-    <legend>Legend</legend>
-    <div class="form-group">
+    <legend>Inscription Wolfsound</legend>
+    <div class="form-group col s12">
       <label for="inputEmail" class="col-lg-2 control-label">Nom</label>
       <div class="col-lg-10">
         <input  name="name" [(ngModel)]="bear.name"
         type="text" class="form-control" id="nom" placeholder="Nom"/>
       </div>
     </div>
-    <div class="form-group">
-      <label for="inputPassword" class="col-lg-2 control-label">Photo</label>
+     <div class="form-group col s12">
+      <label for="inputEmail" class="col-lg-2 control-label">Infos</label>
       <div class="col-lg-10">
-        <input  name="photo" [(ngModel)]="bear.photo"
-        type="text" class="form-control" id="photo" placeholder="Password"/>
+        <input  name="name" [(ngModel)]="bear.infos"
+        type="text" class="form-control" id="nom" placeholder="Infos"/>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Cover</label>
+      <div class="col-lg-10">
+        <input  name="photo" [(ngModel)]="bear.cover"
+        type="text" class="form-control" id="photo" placeholder="Cover"/>
+      </div>
+    </div>
+    <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Profile picture</label>
+      <div class="col-lg-10">
+        <input  name="photo" [(ngModel)]="bear.profilePic"
+        type="text" class="form-control" id="photo" placeholder="Profile picture"/>
+      </div>
+    </div>
+    <div class="form-group col s12">
       <label for="inputPassword" class="col-lg-2 control-label">Descrition</label>
       <div class="col-lg-10">
         <input  name="age" [(ngModel)]="bear.description"
-        type="text" class="form-control" id="description" placeholder="Password"/>
+        type="text" class="form-control" id="description" placeholder="Description"/>
       </div>
     </div>
-    <div class="form-group">
+    <div class="form-group col s12">
       <label for="inputPassword" class="col-lg-2 control-label">Age</label>
       <div class="col-lg-10">
         <input  name="age" [(ngModel)]="bear.age"
-        type="number" class="form-control" id="age" placeholder="Password"/>
+        type="number" class="form-control" id="age" placeholder="Age"/>
+      </div>
+    </div>
+     <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Gigs</label>
+      <div class="col-lg-10">
+        <input  name="age" [(ngModel)]="bear.gigs"
+        type="text" class="form-control" id="age" placeholder="Gigs"/>
 
       </div>
     </div>
-    <p>info : {{bear.age+''+bear.photo+''+bear.name+''+bear.description}}</p>
-    <div class="form-group">
+     <div class="form-group col s12">
+      <label for="inputPassword" class="col-lg-2 control-label">Sound</label>
+      <div class="col-lg-10">
+        <input  name="age" [(ngModel)]="bear.sounds"
+        type="text" class="form-control" id="age" placeholder="embed your soundcloud sound"/>
+
+      </div>
+    </div>
+    <div class="form-group col s12">
       <div class="col-lg-10 col-lg-offset-2">
         <button type="reset" class="btn btn-default">Cancel</button>
         <button type="submit" (click)="saveBear()" class="btn btn-primary">Submit</button>

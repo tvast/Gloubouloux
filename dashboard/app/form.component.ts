@@ -25,9 +25,11 @@ export class FormComponent {
     ngOnInit(): void {
     }
 
-    saveBear() {
+    saveBear(bear: Bear) : void {
       let commentOperation:Observable<Bear[]>;
       this.bearService.addBear(this.bear).subscribe(
       );
+      let link = ['/bear'];
+      this.router.navigate(link);
     }
   }
