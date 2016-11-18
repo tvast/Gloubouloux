@@ -21,12 +21,12 @@ export class BearDetailComponent implements OnInit {
   // bear: Bear[] = [];
   private sub:any;
   private bear: Bear;
-  private router: Router,
+  private router: Router;
 
   constructor(
     private bearService: BearService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
     ) {}
 
   private static _emitters: { [ID: string]: EventEmitter<any> } = {};
@@ -50,22 +50,32 @@ export class BearDetailComponent implements OnInit {
      });
     }  
 
-    destroy (bear) {
+    destroy (bear:Bear) {
       this.sub = this.route.params.subscribe(params => {
         let id = params['id'];
        // Retrieve Pet with Id route param
        this.bearService.deleteBear(id).subscribe(bear => this.bear = bear);
      });
-      // let link = ['/bear'];
-      // this.router.navigate(link);
       this.location.back();
-      
+
+    }
+
+    updateBear () {
+      let link = ['/form'];
+      this.router.navigate(link);
+    }
+
+      gotoDetail(bear: Bear): void {
+      let link = ['/form'];
+      this.router.navigate(link);
     }
 
 
     goBack(): void {
       this.location.back();
     }
+
+
   }
 
 

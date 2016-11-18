@@ -23,6 +23,7 @@ var routes = [
     { path: 'bear', component: bear_component_1.BearComponent },
     { path: 'landingpage', component: landingpage_component_1.LandingPageComponent },
     { path: 'inscription', component: form_component_1.FormComponent },
+    { path: 'update/:id', component: form_component_1.FormComponent },
     // { path: 'detail/:id', component: HeroDetailComponent },
     { path: 'home', component: home_component_1.HomeComponent },
     { path: 'bear/:id', component: bear_detail_component_1.BearDetailComponent }
