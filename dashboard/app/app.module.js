@@ -16,12 +16,24 @@ var form_component_1 = require('./form.component');
 var app_routing_module_1 = require('./app-routing.module');
 // import { InMemoryDataService }  from './in-memory-data.service';
 var angular2_masonry_1 = require('angular2-masonry');
+//module crud
 var app_component_1 = require('./app.component');
 var bear_component_1 = require('./bear.component');
 var home_component_1 = require('./home.component');
 var bear_detail_component_1 = require('./bear-detail.component');
 var visucanvas_component_1 = require('./visucanvas.component');
 var landingpage_component_1 = require('./landingpage.component');
+// soundcloud api 
+var SearchFactory_ts_1 = require('./src/services/SearchFactory.ts');
+var PlaylistService_ts_1 = require('./src/services/PlaylistService.ts');
+var SoundCloudSearch_ts_1 = require('./src/services/SoundCloudSearch.ts');
+var SoundCloudPlayer_ts_1 = require('./src/services/SoundCloudPlayer.ts');
+var SoundManagerSoundPlayer_ts_1 = require('./src/services/SoundManagerSoundPlayer.ts');
+var SoundManager_ts_1 = require('./src/services/SoundManager.ts');
+var Player_ts_1 = require('./src/player/Player.ts');
+var TabList_ts_1 = require('./src/tabList/TabList.ts');
+var LocalStorage_ts_1 = require('./src/services/LocalStorage.ts');
+require('rxjs/Rx');
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
 // import { HeroService }          from './hero.service';
@@ -47,7 +59,16 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 bear_detail_component_1.BearDetailComponent,
                 landingpage_component_1.LandingPageComponent,
-                visucanvas_component_1.visucanvasComponent
+                visucanvas_component_1.visucanvasComponent,
+                SearchFactory_ts_1.SearchFactory,
+                PlaylistService_ts_1.PlaylistService,
+                SoundCloudSearch_ts_1.SoundCloudSearch,
+                SoundCloudPlayer_ts_1.SoundCloudPlayer,
+                SoundManagerSoundPlayer_ts_1.SoundManagerSoundPlayer,
+                SoundManager_ts_1.SoundManager,
+                Player_ts_1.PlayerCmp,
+                TabList_ts_1.TabListCmp,
+                LocalStorage_ts_1.LocalStorage
             ],
             providers: [bear_service_1.BearService],
             bootstrap: [app_component_1.AppComponent]
