@@ -19,7 +19,7 @@
        <div class="col s12 m7">
          <div class="card">
            <div class="card-image">
-             <img src="{{bear.photo}}">
+             <img src="{{bear.cover}}">
              <span class="card-title">{{bear.name}} details!</span>
            </div>
            <div class="card-content">
@@ -31,17 +31,13 @@
              </div>
            </div>
            <div class="card-action">
-             <a href="#">This is a link</a>
+             <a  href="/form/{{bear._id}}">This is a link</a>
              <a (click)="destroy()" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
            </div>
+           {{bear.sounds[0]}}
          </div>
        </div>
      </div>
    </div>
 
-<!--
-  photo:    string;
-  photo2: string;
-  description:    string;
-
-  age: number; -->
+    <visu></visu>

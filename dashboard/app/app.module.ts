@@ -16,7 +16,7 @@ import { AppComponent }         from './app.component';
 import { BearComponent }   from './bear.component';
 import { HomeComponent }  from './home.component';
 import { BearDetailComponent }  from './bear-detail.component';
-
+import { visucanvasComponent }  from './visucanvas.component'; 
 import { LandingPageComponent }  from './landingpage.component';
 
 
@@ -41,10 +41,9 @@ import { BearService }          from './bear.service';
     FormComponent,
     HomeComponent,
     BearDetailComponent,
-    LandingPageComponent
-    // HeroDetailComponent,
-    // HeroesComponent,
-    // HeroSearchComponent
+    LandingPageComponent,
+    visucanvasComponent 
+
   ],
   providers: [ BearService ],
   bootstrap: [ AppComponent ]

@@ -19,17 +19,34 @@ export class FormComponent {
   constructor(
     private router: Router,
     private bearService: BearService) {
-    }
-    onSubmit() { this.submitted = true; }
-
-    ngOnInit(): void {
-    }
-
-    saveBear(bear: Bear) : void {
-      let commentOperation:Observable<Bear[]>;
-      this.bearService.addBear(this.bear).subscribe(
-      );
-      let link = ['/bear'];
-      this.router.navigate(link);
-    }
   }
+  onSubmit() { this.submitted = true; }
+
+  ngOnInit(): void {  
+    // this.sub = this.route.params.subscribe(params => {
+    //   let id = params['id'];
+    //    // Retrieve Pet with Id route param
+    //    this.bearService.findBearById(id).subscribe(bear => this.bear = bear);
+    //    console.log(id)
+    //    console.log(this.bear)
+    //  });
+  }
+
+  saveBear(bear: Bear) : void {
+    let commentOperation:Observable<Bear[]>;
+    this.bearService.addBear(this.bear).subscribe(
+      );
+    let link = ['/bear'];
+    this.router.navigate(link);
+  }
+
+  // updateBear(bear: Bear) : void {
+  //   let commentOperation:Observable<Bear[]>;
+  //   this.bearService.updateBear(this.bear).subscribe(
+  //     );
+  //   let link = ['/bear'];
+  //   this.router.navigate(link);
+  // }
+
+
+}  

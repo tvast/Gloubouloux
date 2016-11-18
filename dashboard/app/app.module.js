@@ -20,6 +20,7 @@ var app_component_1 = require('./app.component');
 var bear_component_1 = require('./bear.component');
 var home_component_1 = require('./home.component');
 var bear_detail_component_1 = require('./bear-detail.component');
+var visucanvas_component_1 = require('./visucanvas.component');
 var landingpage_component_1 = require('./landingpage.component');
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
@@ -45,7 +46,8 @@ var AppModule = (function () {
                 form_component_1.FormComponent,
                 home_component_1.HomeComponent,
                 bear_detail_component_1.BearDetailComponent,
-                landingpage_component_1.LandingPageComponent
+                landingpage_component_1.LandingPageComponent,
+                visucanvas_component_1.visucanvasComponent
             ],
             providers: [bear_service_1.BearService],
             bootstrap: [app_component_1.AppComponent]

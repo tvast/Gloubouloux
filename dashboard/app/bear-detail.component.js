@@ -45,9 +45,15 @@ var BearDetailComponent = (function () {
             // Retrieve Pet with Id route param
             _this.bearService.deleteBear(id).subscribe(function (bear) { return _this.bear = bear; });
         });
-        // let link = ['/bear'];
-        // this.router.navigate(link);
         this.location.back();
+    };
+    BearDetailComponent.prototype.updateBear = function () {
+        var link = ['/form'];
+        this.router.navigate(link);
+    };
+    BearDetailComponent.prototype.gotoDetail = function (bear) {
+        var link = ['/form'];
+        this.router.navigate(link);
     };
     BearDetailComponent.prototype.goBack = function () {
         this.location.back();
