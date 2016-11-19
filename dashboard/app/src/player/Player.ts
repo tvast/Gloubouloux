@@ -95,8 +95,8 @@ export class PlayerCmp implements OnInit {
 	public Song : any
 	public song : Song 
 	private isPlaying: boolean;
-	private currentTime: number;
-	private totalTime: number;
+	private currentTime: any;
+	private totalTime: any;
 	private soundManager: SoundManager;
 
 	constructor(soundManager: SoundManager) {

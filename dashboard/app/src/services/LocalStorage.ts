@@ -7,7 +7,7 @@ export class LocalStorage{
 
 	}
 
-	getObject(key) {
+	getObject(key : any) {
 		try {
 			return JSON.parse(localStorage[key]);
 		}
@@ -16,7 +16,7 @@ export class LocalStorage{
 		}
 	}
 
-	setObject(key, data) {
+	setObject(key :any, data : any) {
 		localStorage[key] = JSON.stringify(data);
 	}
 

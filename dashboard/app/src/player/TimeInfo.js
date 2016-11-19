@@ -13,6 +13,7 @@ var core_1 = require('@angular/core');
 var TimeInfoCmp = (function () {
     function TimeInfoCmp() {
     }
+    ;
     TimeInfoCmp.prototype.formatTime = function (time) {
         if (!this.song || !this.currentTime || !this.totalTime) {
             return '00:00';

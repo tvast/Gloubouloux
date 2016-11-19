@@ -10,9 +10,9 @@ import {Component, Input} from '@angular/core';
 	`,
 })
 export class TimeInfoCmp {
-	@Input('time') currentTime;
-	@Input('total-time') totalTime;
-	@Input('song') song;
+	@Input('time') currentTime :any;
+	@Input('total-time') totalTime : any;;
+	@Input('song') song : any;
 
 	constructor() {
 

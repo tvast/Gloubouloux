@@ -15,17 +15,17 @@ export class HorizontalDraggable {
   private mousemove :any = new EventEmitter();
 
 	@HostListener('mouseup', ['$event'])
-	onMouseup(event) {
+	onMouseup(event : any) {
 		this.mouseup.next(event);
 	}
 
 	@HostListener('mousedown', ['$event'])
-  onMousedown(event) {
+  onMousedown(event : any) {
 		this.mousedown.next(event);
 	}
 
   @HostListener('mousemove', ['$event'])
-  onMousemove(event) {
+  onMousemove(event : any) {
 		this.mousemove.next(event);
 	}
 
@@ -34,14 +34,14 @@ export class HorizontalDraggable {
 		this.element.nativeElement.style.cursor = 'pointer';
 
 		this.mousedrag = this.mousedown
-			.map(event => {
+			.map((event : any) => {
 				event.preventDefault();
 				return {
 					left: event.clientX - this.element.nativeElement.getBoundingClientRect().left,
 					right: event.clientY - this.element.nativeElement.getBoundingClientRect().top
 				}
 			})
-			.flatMap(imageOffset => this.mousemove.map(pos => ({
+			.flatMap((imageOffset : any) => this.mousemove.map((pos : any) => ({
 				top: pos.clientY - imageOffset.top,
 				left: pos.clientX - imageOffset.left
 			})))
@@ -50,7 +50,7 @@ export class HorizontalDraggable {
 
 	onInit() {
 		this.mousedrag.subscribe({
-			next: pos => {
+			next: (pos : any) => {
 				this.element.nativeElement.style.left = pos.left + 'px';
 			}
 		})

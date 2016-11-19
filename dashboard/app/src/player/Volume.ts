@@ -29,7 +29,7 @@ import {Events} from '../interfaces/Events';
 })
 export class VolumeCmp {
 
-	private isMute = false;
+	private isMute : any = false;
 
 	constructor(private soundManager: SoundManager) {
 		this.soundManager.on(Events.Volume, (isMute) => {

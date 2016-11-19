@@ -66,12 +66,12 @@ export class TimeSeekerCmp implements OnInit {
 	}
 
 
-	changePlaybackTime($event) {
+	changePlaybackTime($event : any) {
 		var time = this.calculateTimePercentOnClick($event);
 		this.soundManager.seek(time);
 	}
 
-	private calculateTimePercentOnClick($event) {
+	private calculateTimePercentOnClick($event : any) {
 		var parentX = this.getTimeSliderWidth();
 		var percent = $event.x * 100 / parentX;
 		return percent;

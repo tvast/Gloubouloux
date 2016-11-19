@@ -19,7 +19,7 @@ export class SoundCloudSearch implements ISearch {
 	search(keyword: string): Song[] {
 		var uri = this.makeSearchUri(keyword);
 
-		return this.http.get(uri).map(res => this.handleResponse(res))
+		return this.http.get(uri).map((res :any) => this.handleResponse(res))
 										// .catch(this.handleError);
 	}
 
@@ -40,7 +40,7 @@ export class SoundCloudSearch implements ISearch {
 				result.push(song);
 			});
 		}
-		return result;
+		return result : any;
 	}
 
 	handleError(e: Response) {
