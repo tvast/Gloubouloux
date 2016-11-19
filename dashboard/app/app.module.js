@@ -22,6 +22,13 @@ var home_component_1 = require('./home.component');
 var bear_detail_component_1 = require('./bear-detail.component');
 var visucanvas_component_1 = require('./visucanvas.component');
 var landingpage_component_1 = require('./landingpage.component');
+var SearchFactory_1 = require('./src/services/SearchFactory');
+var PlaylistService_1 = require('./src/services/PlaylistService');
+var SoundCloudSearch_1 = require('./src/services/SoundCloudSearch');
+var SoundCloudPlayer_1 = require('./src/services/SoundCloudPlayer');
+var SoundManagerSoundPlayer_1 = require('./src/services/SoundManagerSoundPlayer');
+var SoundManager_1 = require('./src/services/SoundManager');
+var LocalStorage_1 = require('./src/services/LocalStorage');
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
 // import { HeroService }          from './hero.service';
@@ -49,7 +56,16 @@ var AppModule = (function () {
                 landingpage_component_1.LandingPageComponent,
                 visucanvas_component_1.visucanvasComponent
             ],
-            providers: [bear_service_1.BearService],
+            providers: [
+                bear_service_1.BearService,
+                http_1.Http,
+                SoundCloudSearch_1.SoundCloudSearch,
+                SearchFactory_1.SearchFactory,
+                PlaylistService_1.PlaylistService,
+                SoundCloudPlayer_1.SoundCloudPlayer,
+                SoundManagerSoundPlayer_1.SoundManagerSoundPlayer,
+                SoundManager_1.SoundManager,
+                LocalStorage_1.LocalStorage],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

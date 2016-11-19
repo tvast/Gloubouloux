@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "Wolfsound",
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
@@ -18,10 +18,10 @@
   },
   "keywords": [],
   "author": "",
-  "licenses": [
+  "license": [
     {
-      "type": "MIT",
-      "url": ""
+      "type": "DTFWYWL",
+      "url": "theophile.vast/wolfsound.fr"
     }
   ],
   "dependencies": {

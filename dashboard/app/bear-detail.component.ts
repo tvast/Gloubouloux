@@ -8,6 +8,15 @@ import { Observable } from 'rxjs/Observable';
 import { Bear }        from './bear';
 import { BearService } from './bear.service';
 
+import {SearchFactory} from './src/services/SearchFactory';
+import {PlaylistService} from './src/services/PlaylistService';
+import {SoundCloudSearch} from './src/services/SoundCloudSearch';
+import {SoundCloudPlayer} from './src/services/SoundCloudPlayer';
+import {SoundManagerSoundPlayer} from './src/services/SoundManagerSoundPlayer';
+import {SoundManager} from './src/services/SoundManager';
+import {PlayerCmp} from './src/player/Player';
+import {TabListCmp} from './src/tabList/TabList';
+
 import { Router }            from '@angular/router';
 
 @Component({
