@@ -8,10 +8,32 @@
     </div>
 
     <ul class="right hide-on-med-and-down">
-      <li><a alt="Add a song" style="color :white;" routerLink="/inscription" routerLinkActive="active" ><i class="large material-icons">present_to_all</i><span class="sr-only">(current)</span></a></li>
-      <li><a alt="Login" style="color :white;" routerLink="/login" routerLinkActive="active" ><i class="large material-icons">perm_identity</i><span class="sr-only">(current)</span></a></li>
+      <li><a 
+        data-step="1" 
+        data-intro="Ajouter vos informations ici" 
+        data-position='right' alt="Add a song" style="color :white;" 
+        routerLink="/inscription" 
+        routerLinkActive="active" >
+          <i class="large material-icons">present_to_all</i>
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li>
+        <a 
+        data-step="2" 
+        data-intro="Connectez vous ici" 
+        data-position='right' 
+        alt="Login" 
+        style="color :white;" 
+        routerLink="/login" 
+        routerLinkActive="active" >
+          <i class="large material-icons">perm_identity</i>
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
       <!-- <li><a style="color :white;" routerLink="/home">home</a></li> -->
-      <li><a style="color :white;" routerLink="/bear">Wolfs</a></li>
+       <li><a onclick="javascript:introJs().setOption('showProgress', true).start();"style="color :white;"><i class="large material-icons">settings_input_antenna</i></a></li> 
+        <li><a style="color :white;" routerLink="/bear">Wolfs</a></li> 
       <!-- <li><a style="color :white;" routerLink="/beardetail">detail</a></li> -->
        <!-- <li><a style="color :white;" routerLink="/admin">admin</a></li> -->
     </ul>
@@ -37,9 +59,9 @@
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">What's TROCART ?</h5>
+        <h5 class="white-text">What's Wolfsound?</h5>
         <p class="grey-text text-lighten-4">
-          Trocart is an art dealer website, find and sell art trhought the world !
+         Visualise your sound with web gl
         </p>
 
 
@@ -48,7 +70,7 @@
         <h5 class="white-text">Menu</h5>
         <ul>
           <li><a class="white-text" routerLink="/home">Home</a></li>
-          <li><a class="white-text" routerLink="/inscription">Login</a></li>
+          <li><a class="white-text" routerLink="/login">Login</a></li>
 
         </ul>
       </div>
@@ -56,7 +78,7 @@
   </div>
   <div class="footer-copyright">
     <div class="container">
-    Made with  <i class="material-icons">loyalty</i> by <a class="brown-text text-lighten-3" href="http://theophilevast.fr">Théophile Vast</a>
+    Made with  <i class="material-icons">loyalty</i> by <a class="brown-text text-lighten-3" href="mailto:(theophile.vast@gmail.com">Théophile Vast</a>
     </div>
   </div>
 </footer>
