@@ -12,6 +12,8 @@ import { LandingPageComponent }  from './landingpage.component';
 
 import { visucanvasComponent }  from './visucanvas.component'; 
 import { AdminComponent }  from './admin.component'; 
+import { LoginComponent }  from './login.component'; 
+
 
 
 
@@ -20,12 +22,11 @@ const routes: Routes = [
   { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
 
   { path: 'bear',  component: BearComponent },
-  { path: 'admin',  component: AdminComponent },
+  { path: '9icke$17',  component: AdminComponent },
   { path: 'landingpage',  component: LandingPageComponent },
   { path: 'inscription',     component: FormComponent },
   { path: 'update/:id',     component: FormComponent },
-  // { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'bear/:id', component: BearDetailComponent }
 ];
 

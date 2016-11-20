@@ -23,6 +23,7 @@ var bear_detail_component_1 = require('./bear-detail.component');
 var visucanvas_component_1 = require('./visucanvas.component');
 var landingpage_component_1 = require('./landingpage.component');
 var admin_component_1 = require('./admin.component');
+var login_component_1 = require('./login.component');
 // import { HeroesComponent }      from './heroes.component';
 // import { HeroDetailComponent }  from './hero-detail.component';
 // import { HeroService }          from './hero.service';
@@ -49,7 +50,8 @@ var AppModule = (function () {
                 bear_detail_component_1.BearDetailComponent,
                 landingpage_component_1.LandingPageComponent,
                 visucanvas_component_1.visucanvasComponent,
-                admin_component_1.AdminComponent
+                admin_component_1.AdminComponent,
+                login_component_1.LoginComponent
             ],
             providers: [bear_service_1.BearService],
             bootstrap: [app_component_1.AppComponent]

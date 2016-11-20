@@ -1,0 +1,37 @@
+<div class="login">
+
+<h2 class="center dark-text"><i class="material-icons">flash_on</i>login</h2>
+
+<div class="container">
+<h1>Form</h1>
+
+<form
+      (ngSubmit)="onSubmit()"
+       class="form-horizontal ">
+  <fieldset>
+    <legend>Login Wolfsound<i class="small material-icons">perm_identity</i></legend>
+    <div class="form-group col s12">
+      <label for="inputEmail" class="col-lg-2 control-label">Identifiant</label>
+      <div class="col-lg-10">
+        <input  name="name" [(ngModel)]="id"
+        type="text" class="form-control" id="nom" placeholder="Nom"/>
+      </div>
+    </div>
+     <div class="form-group col s12">
+      <label for="inputEmail" class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input  name="name" [(ngModel)]="password"
+        type="text" class="form-control" id="nom" placeholder="Infos"/>
+      </div>
+    </div>
+     <p> {{id}} + {{password}}</p>
+    <div class="form-group col s12">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Cancel</button>
+        <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>
+</div>

@@ -15,19 +15,18 @@ var router_1 = require('@angular/router');
 // import { HeroDetailComponent }  from './hero-detail.component';
 var bear_component_1 = require('./bear.component');
 var form_component_1 = require('./form.component');
-var home_component_1 = require('./home.component');
 var bear_detail_component_1 = require('./bear-detail.component');
 var landingpage_component_1 = require('./landingpage.component');
 var admin_component_1 = require('./admin.component');
+var login_component_1 = require('./login.component');
 var routes = [
     { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
     { path: 'bear', component: bear_component_1.BearComponent },
-    { path: 'admin', component: admin_component_1.AdminComponent },
+    { path: '9icke$17', component: admin_component_1.AdminComponent },
     { path: 'landingpage', component: landingpage_component_1.LandingPageComponent },
     { path: 'inscription', component: form_component_1.FormComponent },
     { path: 'update/:id', component: form_component_1.FormComponent },
-    // { path: 'detail/:id', component: HeroDetailComponent },
-    { path: 'home', component: home_component_1.HomeComponent },
+    { path: 'login', component: login_component_1.LoginComponent },
     { path: 'bear/:id', component: bear_detail_component_1.BearDetailComponent }
 ];
 var AppRoutingModule = (function () {
