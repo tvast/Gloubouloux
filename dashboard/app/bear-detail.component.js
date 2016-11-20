@@ -45,7 +45,7 @@ var BearDetailComponent = (function () {
             // Retrieve Pet with Id route param
             _this.bearService.deleteBear(id).subscribe(function (bear) { return _this.bear = bear; });
         });
-        this.location.back();
+        // this.location.back();
     };
     BearDetailComponent.prototype.updateBear = function () {
         var link = ['/form'];
@@ -57,25 +57,6 @@ var BearDetailComponent = (function () {
     };
     BearDetailComponent.prototype.goBack = function () {
         this.location.back();
-    };
-    BearDetailComponent.prototype.foo = function () {
-        this.$(document).ready(function () {
-            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-            this.$('.modal').modal();
-            this.$('.modal').modal({
-                dismissible: true,
-                opacity: .5,
-                in_duration: 300,
-                out_duration: 200,
-                starting_top: '4%',
-                ending_top: '10%',
-                ready: function (modal, trigger) {
-                    alert("Ready");
-                    console.log(modal, trigger);
-                },
-                complete: function () { alert('Closed'); } // Callback for Modal close
-            });
-        });
     };
     BearDetailComponent._emitters = {};
     BearDetailComponent = __decorate([

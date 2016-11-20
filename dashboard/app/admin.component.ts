@@ -74,7 +74,9 @@ export class AdminComponent implements OnInit {
        // Retrieve Pet with Id route param
        this.bearService.deleteBear(id).subscribe(bear => this.bear = bear);
      });
-      this.location.back();
+
+      document.windows.reload();
+ 
 
     }
   }

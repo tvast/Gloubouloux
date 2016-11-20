@@ -54,7 +54,7 @@ var AdminComponent = (function () {
             // Retrieve Pet with Id route param
             _this.bearService.deleteBear(id).subscribe(function (bear) { return _this.bear = bear; });
         });
-        this.location.back();
+        document.windows.reload();
     };
     AdminComponent._emitters = {};
     AdminComponent = __decorate([
