@@ -21,7 +21,7 @@ var admin_component_1 = require('./admin.component');
 var login_component_1 = require('./login.component');
 var routes = [
     { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
-    { path: 'bear', component: bear_component_1.BearComponent },
+    { path: 'wolf', component: bear_component_1.BearComponent },
     { path: '9icke$17', component: admin_component_1.AdminComponent },
     { path: 'landingpage', component: landingpage_component_1.LandingPageComponent },
     { path: 'inscription', component: form_component_1.FormComponent },

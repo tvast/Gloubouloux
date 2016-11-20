@@ -34,7 +34,7 @@ var FormComponent = (function () {
     FormComponent.prototype.saveBear = function (bear) {
         var commentOperation;
         this.bearService.addBear(this.bear).subscribe();
-        var link = ['/bear'];
+        var link = ['/wolf'];
         this.router.navigate(link);
     };
     FormComponent = __decorate([

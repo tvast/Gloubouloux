@@ -18,6 +18,11 @@ var BearDetailComponent = (function () {
         this.bearService = bearService;
         this.route = route;
         this.location = location;
+        this.foo = [
+            name, 'app/sounds/monster.mp3',
+            name, 'app/sounds/tinush.mp3',
+            name, 'app/sounds/tinush.mp3',
+        ];
     }
     // Set a new event in the store with a given ID
     // as key

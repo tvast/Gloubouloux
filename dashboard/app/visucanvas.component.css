@@ -1,5 +1,12 @@
-html, body {
-  height: 100%;
+#gradient {
+  position: absolute;
+  width:100%;
+  height : 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #836997;
 }
 
 body {
@@ -1051,6 +1058,6 @@ body {
 }
 
 .wrapper {
-  width :500px;
-  height: 300px;
+  width :100%;
+  height: 100%;
 }

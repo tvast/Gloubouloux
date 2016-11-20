@@ -21,7 +21,7 @@ import { LoginComponent }  from './login.component';
 const routes: Routes = [
   { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
 
-  { path: 'bear',  component: BearComponent },
+  { path: 'wolf',  component: BearComponent },
   { path: '9icke$17',  component: AdminComponent },
   { path: 'landingpage',  component: LandingPageComponent },
   { path: 'inscription',     component: FormComponent },

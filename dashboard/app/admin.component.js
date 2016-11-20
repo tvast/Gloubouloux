@@ -29,23 +29,11 @@ var AdminComponent = (function () {
         return this._emitters[ID];
     };
     AdminComponent.prototype.ngOnInit = function () {
-        // this.bearService.getAllBears().subscribe(bears => this.bears = bears);
         var _this = this;
         this.bearService.getAllBears().subscribe(function (bears) {
             _this.bears = bears;
             _this.totalWolf = _this.bears.length;
         });
-        for (var _i = 0, _a = this.bears; _i < _a.length; _i++) {
-            var bear = _a[_i];
-            this.averageWolf.push(bear.age);
-            this.nbAge++;
-            console.log(this.averageWolf);
-        }
-        for (var _b = 0, _c = this.averageWolf; _b < _c.length; _b++) {
-            var item = _c[_b];
-            this.averageAgeWolf = item.age * this.nbAge;
-            console.log(this.averageAgeWolf);
-        }
     };
     AdminComponent.prototype.destroy = function (bear) {
         var _this = this;
@@ -54,7 +42,7 @@ var AdminComponent = (function () {
             // Retrieve Pet with Id route param
             _this.bearService.deleteBear(id).subscribe(function (bear) { return _this.bear = bear; });
         });
-        document.windows.reload();
+        // this.location.back();
     };
     AdminComponent._emitters = {};
     AdminComponent = __decorate([

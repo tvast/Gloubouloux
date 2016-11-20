@@ -16,38 +16,49 @@
 
 <div class="container">
   <div class="row" *ngIf="bear">
-       <div class="col s12 m7">
+       <div class="#">
          <div class="card">
            <div class="card-image">
-             <img src="{{bear.cover}}">
-             <span class="card-title">{{bear.name}} details!</span>
+             
+              <img src="{{bear.cover}}"> 
+               <span class="card-title">{{bear.name}} details!</span>
            </div>
-           <div class="card-content">
+           <div style="box-shadow: 0 4px 2px -2px gray;" class="card-content">
              <div>
-               <!-- <label>Id: </label>{{bear._id}}<br> -->
+                <label>Id: </label>{{bear._id}}<br> 
                <label>Age: </label>{{bear.age}}<br>
                <label>Description: </label>{{bear.description}}<br>
                <label>Description: </label>{{bear.infos}}<br>
-                <!-- Modal Trigger -->
+                 Modal Trigger 
                   <a class="waves-effect waves-light btn" (click)="destroy()">Update your settings</a>
-
-                  <!-- Modal Structure -->
-                  <div id="modal1" class="modal">
-                    <div class="modal-content">
-                      <h4>Form</h4>
-                      <p>A bunch of text</p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-                    </div>
-                  </div>
-
-
              </div>
            </div>
-           <div class="card-action">
-             <a  href="/form/{{bear._id}}">Update your settings</a>
+         </div>
+       </div>
+       <div style="background-color: #cddc39; height:100%" class="col s12 m6">
+          
+       </div>
+     </div>
+   </div>
+
+   <div class="container">
+    <visu></visu>
+  <div class="row" >
+       <div class="col s12 m7">
+         <div class="card">
+           <div class="card-image">
+             <img src="">
+             <span class="card-title">Sounds</span>
            </div>
+           <div  style="box-shadow: 0 4px 2px -2px gray;" class="card-content">
+             <div>
+                <audio *ngFor="let name of foo" controls>
+                    <source src="{{foo.name}}" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                  
+             </div>
+        
          </div>
        </div>
      </div>

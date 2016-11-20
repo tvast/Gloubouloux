@@ -36,7 +36,7 @@ export class FormComponent {
     let commentOperation:Observable<Bear[]>;
     this.bearService.addBear(this.bear).subscribe(
       );
-    let link = ['/bear'];
+    let link = ['/wolf'];
     this.router.navigate(link);
   }
 
