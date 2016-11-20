@@ -28,18 +28,25 @@
                <label>Age: </label>{{bear.age}}<br>
                <label>Description: </label>{{bear.description}}<br>
                <label>Description: </label>{{bear.infos}}<br>
+                <!-- Modal Trigger -->
+                  <a class="waves-effect waves-light btn" href="#modal1">Update your settings</a>
+
+                  <!-- Modal Structure -->
+                  <div id="modal1" class="modal">
+                    <div class="modal-content">
+                      <h4>Form</h4>
+                      <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    </div>
+                  </div>
 
 
-
-  infos
-  gigs
-  age
-  id
              </div>
            </div>
            <div class="card-action">
-             <a  href="/form/{{bear._id}}">This is a link</a>
-             <a (click)="destroy()" class="waves-effect waves-light btn">Delete</a>
+             <a  href="/form/{{bear._id}}">Update your settings</a>
            </div>
          </div>
        </div>
