@@ -30,14 +30,14 @@ import { BearService }          from './bear.service';
 
 @NgModule({
   imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
+  BrowserModule,
+  FormsModule,
+  HttpModule,
     // InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
     MasonryModule
-  ],
-  declarations: [
+    ],
+    declarations: [
     AppComponent,
     BearComponent,
     FormComponent,
@@ -48,8 +48,8 @@ import { BearService }          from './bear.service';
     AdminComponent,
     LoginComponent
 
-  ],
-  providers: [ BearService ],
-  bootstrap: [ AppComponent ]
-})
+    ],
+    providers: [ BearService ],
+    bootstrap: [ AppComponent ]
+  })
 export class AppModule { }

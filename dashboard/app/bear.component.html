@@ -1,10 +1,10 @@
 <div class="container">
-    <h3>Wolfs</h3>
+  <h3>Wolfs</h3>
 
- <masonry>
+  <masonry>
    <masonry-brick class="brick" *ngFor="let bear of bears">
 
-      <div class="card">
+   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
       <img class="activator" src="{{bear.cover}}">
     </div>
@@ -14,15 +14,15 @@
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-     <ul>
+      <ul>
        <li><a >{{bear.name}}</a></li>
        <li>{{bear.age}}</li>
        <li>{{bear.description}}</li>
        <img class="image materialboxed" width="10%" src="{{bear.photo}}"/>
      </ul>
-    </div>
-  </div>
+   </div>
+ </div>
 
 </masonry-brick>
- </masonry>
- </div>
+</masonry>
+</div>
