@@ -14,7 +14,7 @@
 </div> -->
 <div class="container">
     <h3>Top Bears</h3>
-<masonry>
+<!-- <masonry>
    <masonry-brick class="brick" *ngFor="let bear of bears">
     <ul>
        <li><a [routerLink]="['/bear', bear._id]">{{bear.name}}</a></li>
@@ -22,7 +22,34 @@
        <li>{{bear.description}}</li>
        <img class="image materialboxed" width="10%" src="{{bear.photo}}"/>
      </ul></masonry-brick>
+ </masonry> -->
+
+ <masonry>
+   <masonry-brick class="brick" *ngFor="let bear of bears">
+
+      <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="{{bear.photo}}">
+    </div>
+    <div class="card-content">
+      <span [routerLink]="['/bear', bear._id]" class="card-title activator grey-text text-darken-4">{{bear.name}}<i class="material-icons right">more_vert</i></span>
+      <p><a href="#">This is a link</a></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+     <ul>
+       <li><a >{{bear.name}}</a></li>
+       <li>{{bear.age}}</li>
+       <li>{{bear.description}}</li>
+       <img class="image materialboxed" width="10%" src="{{bear.photo}}"/>
+     </ul>
+    </div>
+  </div>
+
+</masonry-brick>
  </masonry>
+
+
 
  </div>
 

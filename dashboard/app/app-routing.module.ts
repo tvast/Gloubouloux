@@ -11,11 +11,16 @@ import { BearDetailComponent }  from './bear-detail.component';
 import { LandingPageComponent }  from './landingpage.component';
 
 import { visucanvasComponent }  from './visucanvas.component'; 
+import { AdminComponent }  from './admin.component'; 
+
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
 
   { path: 'bear',  component: BearComponent },
+  { path: 'admin',  component: AdminComponent },
   { path: 'landingpage',  component: LandingPageComponent },
   { path: 'inscription',     component: FormComponent },
   { path: 'update/:id',     component: FormComponent },

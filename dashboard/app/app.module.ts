@@ -18,6 +18,7 @@ import { HomeComponent }  from './home.component';
 import { BearDetailComponent }  from './bear-detail.component';
 import { visucanvasComponent }  from './visucanvas.component'; 
 import { LandingPageComponent }  from './landingpage.component';
+import { AdminComponent }  from './admin.component';
 
 
 // import { HeroesComponent }      from './heroes.component';
@@ -42,7 +43,8 @@ import { BearService }          from './bear.service';
     HomeComponent,
     BearDetailComponent,
     LandingPageComponent,
-    visucanvasComponent 
+    visucanvasComponent,
+    AdminComponent
 
   ],
   providers: [ BearService ],

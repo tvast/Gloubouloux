@@ -1,13 +1,25 @@
 .head {
-  background: url("app/img/background1.jpg");
+  background: black;
 }
 
 .middle {
-  background: url("app/img/background2.jpg");
+  background: black;
 }
 
 .end {
-  background: url("app/img/background3.jpg");
+  background:black;
+}
+
+
+.w{
+  color : #FF9E00 ;
+}
+
+.s{
+  color : #FF472C ;
+}
+.o {
+color : #106BE0;
 }
 
 /*Glitch effec*/
@@ -16,7 +28,7 @@
 }
 
 .glitch-wrapper {
-  font-family: 'Nosifer', cursive;
+  font-family: 'Poiret One', cursive;
   height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -34,6 +46,15 @@
 .glitch {
   color: white;
   font-size: 150px;
+  text-transform: upercase;
+  position: relative;
+  display: inline-block;
+}
+
+.glitch2 {
+  font-family: 'Poiret One', cursive;
+  color: white;
+  font-size: 12pxpx;
   text-transform: upercase;
   position: relative;
   display: inline-block;
@@ -61,6 +82,31 @@
   clip: rect(85px, 550px, 140px, 0);
   -webkit-animation: glitch-anim 2.5s infinite linear alternate-reverse;
           animation: glitch-anim 2.5s infinite linear alternate-reverse;
+}
+
+.glitch2::before,
+.glitch2::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+.glitch2::before {
+  left: 2px;
+  text-shadow: -2px 0 #49fc00;
+  clip: rect(24px, 550px, 90px, 0);
+  -webkit-animation: glitch-anim-2 8s infinite linear alternate-reverse;
+          animation: glitch-anim-2 8s infinite linear alternate-reverse;
+}
+.glitch2::after {
+  left: -2px;
+  text-shadow: -2px 0 #b300fc;
+  clip: rect(85px, 550px, 140px, 0);
+  -webkit-animation: glitch-anim 6s infinite linear alternate-reverse;
+          animation: glitch-anim 6s infinite linear alternate-reverse;
 }
 @-webkit-keyframes glitch-anim {
   0% {

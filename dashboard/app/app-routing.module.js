@@ -18,9 +18,11 @@ var form_component_1 = require('./form.component');
 var home_component_1 = require('./home.component');
 var bear_detail_component_1 = require('./bear-detail.component');
 var landingpage_component_1 = require('./landingpage.component');
+var admin_component_1 = require('./admin.component');
 var routes = [
     { path: '', redirectTo: '/landingpage', pathMatch: 'full' },
     { path: 'bear', component: bear_component_1.BearComponent },
+    { path: 'admin', component: admin_component_1.AdminComponent },
     { path: 'landingpage', component: landingpage_component_1.LandingPageComponent },
     { path: 'inscription', component: form_component_1.FormComponent },
     { path: 'update/:id', component: form_component_1.FormComponent },

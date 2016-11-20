@@ -24,20 +24,26 @@
            </div>
            <div class="card-content">
              <div>
-               <label>Id: </label>{{bear._id}}<br>
+               <!-- <label>Id: </label>{{bear._id}}<br> -->
                <label>Age: </label>{{bear.age}}<br>
                <label>Description: </label>{{bear.description}}<br>
-               <label>Description: </label>{{bear.description}}<br>
+               <label>Description: </label>{{bear.infos}}<br>
+
+
+
+  infos
+  gigs
+  age
+  id
              </div>
            </div>
            <div class="card-action">
              <a  href="/form/{{bear._id}}">This is a link</a>
-             <a (click)="destroy()" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+             <a (click)="destroy()" class="waves-effect waves-light btn">Delete</a>
            </div>
-           {{bear.sounds[0]}}
          </div>
        </div>
      </div>
    </div>
 
-    <visu></visu>
+ <!--    <visu></visu> -->
