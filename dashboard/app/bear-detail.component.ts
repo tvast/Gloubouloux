@@ -24,11 +24,11 @@ export class BearDetailComponent implements OnInit {
   private router: Router;
   $:any;
   foo = [
-      name: 'app/sounds/monster.mp3',
-      name: 'app/sounds/tinush.mp3',
-      name: 'app/sounds/tinush.mp3',
-    ];
- 
+  name: 'app/sounds/monster.mp3',
+  name: 'app/sounds/tinush.mp3',
+  name: 'app/sounds/tinush.mp3',
+  ];
+  
 
   constructor(
     private bearService: BearService,
@@ -72,7 +72,7 @@ export class BearDetailComponent implements OnInit {
       this.router.navigate(link);
     }
 
-      gotoDetail(bear: Bear): void {
+    gotoDetail(bear: Bear): void {
       let link = ['/form'];
       this.router.navigate(link);
     }

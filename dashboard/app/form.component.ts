@@ -23,13 +23,6 @@ export class FormComponent {
   onSubmit() { this.submitted = true; }
 
   ngOnInit(): void {  
-    // this.sub = this.route.params.subscribe(params => {
-    //   let id = params['id'];
-    //    // Retrieve Pet with Id route param
-    //    this.bearService.findBearById(id).subscribe(bear => this.bear = bear);
-    //    console.log(id)
-    //    console.log(this.bear)
-    //  });
   }
 
   saveBear(bear: Bear) : void {
@@ -40,13 +33,6 @@ export class FormComponent {
     this.router.navigate(link);
   }
 
-  // updateBear(bear: Bear) : void {
-  //   let commentOperation:Observable<Bear[]>;
-  //   this.bearService.updateBear(this.bear).subscribe(
-  //     );
-  //   let link = ['/bear'];
-  //   this.router.navigate(link);
-  // }
 
 
 }  

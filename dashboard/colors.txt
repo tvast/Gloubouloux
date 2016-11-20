@@ -1,8 +1,0 @@
-jaune : rgb(255, 158, 0) #FF9E00
-rouge : rgb(255, 71, 44) #FF472C
-bleu : rgb(16, 107, 224) #106BE0
-
-ou
-
-#f03e45 rouge mixlr
-#808080 gris mixlr

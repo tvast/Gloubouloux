@@ -51,13 +51,13 @@ export class AdminComponent implements OnInit {
   }
 
 
-       destroy (bear:Bear) {
-      this.sub = this.route.params.subscribe(params => {
-        let id = params['id'];
+  destroy (bear:Bear) {
+    this.sub = this.route.params.subscribe(params => {
+      let id = params['id'];
        // Retrieve Pet with Id route param
        this.bearService.deleteBear(id).subscribe(bear => this.bear = bear);
      });
       // this.location.back();
 
-    
-  }
+      
+    }

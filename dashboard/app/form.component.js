@@ -23,13 +23,6 @@ var FormComponent = (function () {
     }
     FormComponent.prototype.onSubmit = function () { this.submitted = true; };
     FormComponent.prototype.ngOnInit = function () {
-        // this.sub = this.route.params.subscribe(params => {
-        //   let id = params['id'];
-        //    // Retrieve Pet with Id route param
-        //    this.bearService.findBearById(id).subscribe(bear => this.bear = bear);
-        //    console.log(id)
-        //    console.log(this.bear)
-        //  });
     };
     FormComponent.prototype.saveBear = function (bear) {
         var commentOperation;
