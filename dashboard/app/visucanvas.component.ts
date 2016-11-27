@@ -11,9 +11,9 @@ export class visucanvasComponent {
   // title = 'Tour of Heroes';
 
   ngOnInit () {
-  	// target to give background to
-    // var $div = document.getElementById("gradient");
-// rgb vals of the gradients
+//   	//target to give background to
+//     var $div = document.getElementById("gradient");
+// //rgb vals of the gradients
 // var gradients = [{
 //   start: [128, 179, 171],
 //   stop: [30, 41, 58]
