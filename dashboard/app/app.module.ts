@@ -3,37 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
-import { FormComponent } from './form.component';
+import { FormComponent } from './login/form.component';
 import { AppRoutingModule } from './app-routing.module';
 
-// Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryDataService }  from './in-memory-data.service';
-
 import { MasonryModule } from 'angular2-masonry';
-
+//component
 import { AppComponent }         from './app.component';
-import { BearComponent }   from './bear.component';
-import { HomeComponent }  from './home.component';
-import { BearDetailComponent }  from './bear-detail.component';
-import { visucanvasComponent }  from './visucanvas.component'; 
-import { LandingPageComponent }  from './landingpage.component';
-import { AdminComponent }  from './admin.component';
-import { LoginComponent }  from './login.component'; 
-
-
-// import { HeroesComponent }      from './heroes.component';
-// import { HeroDetailComponent }  from './hero-detail.component';
-// import { HeroService }          from './hero.service';
+import { BearComponent }   from './liste/bear.component';
+import { HomeComponent }  from './home/home.component';
+import { BearDetailComponent }  from './detail/bear-detail.component';
+import { visucanvasComponent }  from './visualizer/visucanvas.component'; 
+import { LandingPageComponent }  from './home/landingpage.component';
+import { AdminComponent }  from './admin/admin.component';
+import { LoginComponent }  from './login/login.component';
+import { visucanvasGreenComponent }  from './greenvisualizer.component'; 
+//service
 import { BearService }          from './bear.service';
-// import { HeroSearchComponent }  from './hero-search.component';
 
 @NgModule({
   imports: [
   BrowserModule,
   FormsModule,
   HttpModule,
-    // InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
     MasonryModule
     ],
@@ -46,7 +37,8 @@ import { BearService }          from './bear.service';
     LandingPageComponent,
     visucanvasComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    visucanvasGreenComponent
 
     ],
     providers: [ BearService ],

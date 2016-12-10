@@ -1,22 +1,15 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 
-// import { DashboardComponent }   from './dashboard.component';
-// import { HeroesComponent }      from './heroes.component';
-// import { HeroDetailComponent }  from './hero-detail.component';
-import { BearComponent }  from './bear.component';
-import { FormComponent }  from './form.component';
-import { HomeComponent }  from './home.component';
-import { BearDetailComponent }  from './bear-detail.component';
-import { LandingPageComponent }  from './landingpage.component';
-
-import { visucanvasComponent }  from './visucanvas.component'; 
-import { AdminComponent }  from './admin.component'; 
-import { LoginComponent }  from './login.component'; 
-
-
-
-
+import { AppComponent }         from './app.component';
+import { BearComponent }   from './liste/bear.component';
+import { HomeComponent }  from './home/home.component';
+import { BearDetailComponent }  from './detail/bear-detail.component';
+import { visucanvasComponent }  from './visualizer/visucanvas.component'; 
+import { LandingPageComponent }  from './home/landingpage.component';
+import { AdminComponent }  from './admin/admin.component';
+import { LoginComponent }  from './login/login.component';
+import { visucanvasGreenComponent }  from './greenvisualizer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
