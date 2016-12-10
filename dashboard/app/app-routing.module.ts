@@ -9,7 +9,8 @@ import { visucanvasComponent }  from './visualizer/visucanvas.component';
 import { LandingPageComponent }  from './home/landingpage.component';
 import { AdminComponent }  from './admin/admin.component';
 import { LoginComponent }  from './login/login.component';
-import { visucanvasGreenComponent }  from './greenvisualizer.component';
+import { FormComponent }  from './login/form.component';
+import { visucanvasGreenComponent }  from './visualizer/greenvisualizer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },

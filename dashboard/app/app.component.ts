@@ -4,7 +4,7 @@ import { Component }          from '@angular/core';
   // moduleId: module.id,
   selector: 'my-app',
   templateUrl: `app/app.component.html`,
-  styleUrls: ['app/app.component.css']
+  styleUrls: ['app/css/app.component.css']
 })
 export class AppComponent {
   title = 'Tour of Heroes';

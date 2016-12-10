@@ -1,4 +1,4 @@
-# TROCART (beta)
+# Gloubouloux (beta)
 
 # Requirements
 
