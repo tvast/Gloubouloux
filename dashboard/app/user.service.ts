@@ -16,7 +16,7 @@ export class UserService {
 
     return this.http
       .post(
-        '/login', 
+        '/landingpage', 
         JSON.stringify({ email, password }), 
         { headers }
       )

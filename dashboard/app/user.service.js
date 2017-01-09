@@ -22,7 +22,7 @@ var UserService = (function () {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http
-            .post('/login', JSON.stringify({ email: email, password: password }), { headers: headers })
+            .post('/landingpage', JSON.stringify({ email: email, password: password }), { headers: headers })
             .map(function (res) { return res.json(); })
             .map(function (res) {
             if (res.success) {

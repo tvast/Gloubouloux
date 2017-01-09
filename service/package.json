@@ -11,10 +11,11 @@
   "author": "Théophile Vast",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "~1.0.1",
+    "body-parser": "^1.0.2",
     "cors": "^2.8.1",
-    "express": "~4.0.0",
-    "mongoose": "^4.6.5",
-    "morgan": "~1.0.0"
+    "express": "^4.0.0",
+    "jsonwebtoken": "^7.2.1",
+    "mongoose": "^4.7.6",
+    "morgan": "^1.0.1"
   }
 }

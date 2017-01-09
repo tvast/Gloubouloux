@@ -21,7 +21,7 @@ var LoginComponent = (function () {
         var _this = this;
         this.userService.login(email, password).subscribe(function (result) {
             if (result) {
-                _this.router.navigate(['']);
+                _this.router.navigate(['/landingpage']);
                 console.log("salut");
             }
         });
