@@ -1,6 +1,8 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
 
+import { LoggedInGuard } from './logged-in.guard';
+
 import { AppComponent }         from './app.component';
 import { BearComponent }   from './liste/bear.component';
 import { HomeComponent }  from './home/home.component';

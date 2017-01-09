@@ -20,6 +20,9 @@ import { visucanvasGreenComponent }  from './visualizer/greenvisualizer.componen
 //service
 import { BearService }          from './bear.service';
 
+import { UserService } from './user.service';
+import { LoggedInGuard } from './logged-in.guard';
+
 @NgModule({
   imports: [
   BrowserModule,
@@ -41,7 +44,7 @@ import { BearService }          from './bear.service';
     visucanvasGreenComponent
 
     ],
-    providers: [ BearService ],
+    providers: [ BearService , UserService, LoggedInGuard ],
     bootstrap: [ AppComponent ]
   })
 export class AppModule { }
