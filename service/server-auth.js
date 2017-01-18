@@ -1,6 +1,9 @@
 // =================================================================
 // get the packages we need ========================================
 // =================================================================
+
+//https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
+
 var express 	= require('express');
 var app         = express();
 var bodyParser  = require('body-parser');
@@ -10,6 +13,7 @@ var mongoose    = require('mongoose');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config = require('./config'); // get our config file
 var User   = require('./app/models/user'); // get our mongoose model
+var cors       = require('cors')
 
 // =================================================================
 // configuration ===================================================
@@ -24,6 +28,7 @@ app.use(bodyParser.json());
 
 // use morgan to log requests to the console
 app.use(morgan('dev'));
+app.use(cors());
 
 // =================================================================
 // routes ==========================================================
