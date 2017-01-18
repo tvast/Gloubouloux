@@ -15,6 +15,7 @@ var UserService = (function () {
     function UserService(http) {
         this.http = http;
         this.loggedIn = false;
+        this.userAuth = "http://localhost:8080/api/authenticate";
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
     UserService.prototype.login = function (email, password) {
@@ -22,7 +23,7 @@ var UserService = (function () {
         var headers = new http_1.Headers();
         headers.append('Content-Type', 'application/json');
         return this.http
-            .post('/landingpage', JSON.stringify({ email: email, password: password }), { headers: headers })
+            .post(this.userAuth, JSON.stringify({ email: email, password: password }), { headers: headers })
             .map(function (res) { return res.json(); })
             .map(function (res) {
             if (res.success) {
@@ -46,4 +47,5 @@ UserService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], UserService);
 exports.UserService = UserService;
+//https://medium.com/@blacksonic86/authentication-in-angular-2-958052c64492#.io8d6aa8c 
 //# sourceMappingURL=user.service.js.map

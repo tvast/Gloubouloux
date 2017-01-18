@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "QuickStart package.json from the documentation, supplemented with testing support",
   "scripts": {
-    /*"start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",*/
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "docker-build": "docker build -t ng2-quickstart .",
     "docker": "npm run docker-build && docker run -it --rm -p 3000:3000 -p 3001:3001 ng2-quickstart",
     "pree2e": "npm run webdriver:update",
@@ -15,8 +15,6 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "webdriver:update": "webdriver-manager update"
-    "postinstall": "ng build --aot -prod"
-    "start": "node server.js"
     
   },
   "keywords": [],
@@ -46,8 +44,7 @@
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.39",
     "typings": "^1.4.0",
-    "zone.js": "^0.6.26",
-    "angular-cli": "1.0.0-beta.22-1"
+    "zone.js": "^0.6.26"
   },
   "devDependencies": {
     "concurrently": "^3.1.0",
@@ -71,9 +68,5 @@
     "@types/jasmine": "^2.5.35",
     "@types/selenium-webdriver": "^2.53.32"
   },
-  "repository": {},
-  "engines": {
-  "node": "6.9.2",
-  "npm": "3.10.9"
-}
+  "repository": {}
 }

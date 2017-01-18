@@ -16,10 +16,14 @@ var LoginComponent = (function () {
     function LoginComponent(userService, router) {
         this.userService = userService;
         this.router = router;
+        this.users = [];
+        this.tokens = [];
     }
     LoginComponent.prototype.onSubmit = function (email, password) {
         var _this = this;
-        this.userService.login(email, password).subscribe(function (result) {
+        console.log("hello");
+        this.userService.login(this.email, this.password).subscribe(function (result) {
+            console.log(token);
             if (result) {
                 _this.router.navigate(['/landingpage']);
                 console.log("salut");

@@ -13,18 +13,18 @@
       <div class="form-group col s12">
         <label for="inputEmail" class="col-lg-2 control-label">Identifiant</label>
         <div class="col-lg-10">
-          <input  name="name" [(ngModel)]="id"
-          type="text" class="form-control" id="nom" placeholder="Nom"/>
+          <input  name="name" [(ngModel)]="user.name"
+          type="text" class="form-control" id="name" placeholder="name"/>
         </div>
       </div>
       <div class="form-group col s12">
         <label for="inputEmail" class="col-lg-2 control-label">Password</label>
         <div class="col-lg-10">
-          <input  name="name" [(ngModel)]="password"
-          type="text" class="form-control" id="nom" placeholder="Infos"/>
+          <input  name="password" [(ngModel)]="user.password"
+          type="text" class="form-control" id="password" placeholder="password"/>
         </div>
       </div>
-      <p> {{id}} + {{password}}</p>
+      <p> {{name}} + {{password}}</p>
       <div class="form-group col s12">
         <div class="col-lg-10 col-lg-offset-2">
           <button type="reset" class="btn btn-default">Cancel</button>

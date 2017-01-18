@@ -5,17 +5,17 @@
   <title>Gloubouloux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="materialize.css">
-  <link rel="stylesheet" href="stylemate.css">
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="styleloader.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./materialize.css">
+  <link rel="stylesheet" href="./stylemate.css">
+  <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="./styleloader.css" rel="stylesheet" type="text/css">
 
   <!--MDL librairy  -->
 
@@ -30,7 +30,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
-  <link href="node_modules/intro.js/introjs.css" rel="stylesheet">
+  <link href="./node_modules/intro.js/introjs.css" rel="stylesheet">
   
 
   <!-- Polyfill(s) for older browsers -->
@@ -40,21 +40,27 @@
   <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
   <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script> -->
 
-  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <!-- <script src="./node_modules/core-js/client/shim.min.js"></script>
 
-  <script src="node_modules/zone.js/dist/zone.js"></script>
-  <script src="node_modules/reflect-metadata/Reflect.js"></script>
-  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="./zones.js/dist/zone.js"></script> -->
+<!--   <script src="./node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="./node_modules/systemjs/dist/system.src.js"></script> -->
+
+  <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+
+    <script src="https://unpkg.com/zone.js@0.7.4?main=browser"></script>
+    <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
 
   <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
 
-  <script src="systemjs.config.js"></script>
+  <script src="./systemjs.config.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
   <script>
-  System.import('app').catch(function(err){ console.error(err); });
+  System.import('./app').catch(function(err){ console.error(err); });
   </script>
 </head>
 
@@ -62,8 +68,8 @@
   <my-app>
     <div class="loading">
 
-      <!-- <div class="loader"></div> -->
- <!--      <div class="circle-loader">
+      <!-- <!-- <div class="loader"></div> -->
+      <div class="circle-loader">
         <div class="circle-line">
           <div class="circle circle-blue"></div>
           <div class="circle circle-blue"></div>
@@ -86,7 +92,7 @@
         </div>
       </div> -->
       <!-- <h1 id="loading">Loading...</h1> -->
-      <div class="socket">
+     <!--  <div class="socket">
       <div class="gel center-gel">
         <div class="hex-brick h1"></div>
         <div class="hex-brick h2"></div>
@@ -276,19 +282,19 @@
       </div>
       
     </div>
-    </div>
+    </div> -->
   </my-app>
 
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   
-  <script src="js/init.js"></script>
+  <script src="./js/init.js"></script>
   <script src="https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.js"></script>
   <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-  <script src="js/materialize.js"></script>
-  <script type="text/javascript" src="node_modules/intro.js/minified/intro.min.js"></script>
+  <script src="./js/materialize.js"></script>
+  <script type="text/javascript" src="./node_modules/intro.js/minified/intro.min.js"></script>
 
 
 </body>
