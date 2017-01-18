@@ -59,6 +59,8 @@ export class BearDetailComponent implements OnInit {
        this.bearService.deleteBear(id).subscribe(bear => this.bear = bear);
      });
       // this.location.back();
+      let link = ['/wolf'];
+    this.router.navigate(link);
 
     }
 

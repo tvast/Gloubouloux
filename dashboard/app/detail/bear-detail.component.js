@@ -46,6 +46,8 @@ var BearDetailComponent = (function () {
             _this.bearService.deleteBear(id).subscribe(function (bear) { return _this.bear = bear; });
         });
         // this.location.back();
+        var link = ['/wolf'];
+        this.router.navigate(link);
     };
     BearDetailComponent.prototype.gotoDetail = function (bear) {
         var link = ['/form'];

@@ -13,7 +13,7 @@
       <div class="form-group col s12">
         <label for="inputEmail" class="col-lg-2 control-label">Identifiant</label>
         <div class="col-lg-10">
-          <input  name="name" [(ngModel)]="id"
+          <input  name="name" [(ngModel)]="email"
           type="text" class="form-control" id="nom" placeholder="Nom"/>
         </div>
       </div>
@@ -24,11 +24,11 @@
           type="text" class="form-control" id="nom" placeholder="Infos"/>
         </div>
       </div>
-      <p> {{id}} + {{password}}</p>
+      <p> {{email}} + {{password}}</p>
       <div class="form-group col s12">
         <div class="col-lg-10 col-lg-offset-2">
           <button type="reset" class="btn btn-default">Cancel</button>
-          <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+          <button type="submit" (click)="onSubmit3()" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </fieldset>

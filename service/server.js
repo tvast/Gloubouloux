@@ -25,8 +25,8 @@ app.use(bodyParser.json());
 var port     = process.env.PORT || 8081; // set our port
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost:27017'); // connect to our database  mongodb://<user>:<pass>@waffle.modulusmongo.net:27017/yzY5qewy
-// mongoose.connect('mongodb://test:test@waffle.modulusmongo.net:27017/yzY5qewy');
+//mongoose.connect('mongodb://localhost:27017'); // connect to our database  mongodb://<user>:<pass>@waffle.modulusmongo.net:27017/yzY5qewy
+mongoose.connect('mongodb://test:test@waffle.modulusmongo.net:27017/yzY5qewy');
 var Bear     = require('./app/models/bear');
 
 // ROUTES FOR OUR API

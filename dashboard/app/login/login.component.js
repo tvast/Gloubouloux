@@ -12,19 +12,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var user_service_1 = require("./../user.service");
+var bear_service_1 = require("./../bear.service");
 var LoginComponent = (function () {
-    function LoginComponent(userService, router) {
+    function LoginComponent(userService, router, bearService) {
         this.userService = userService;
         this.router = router;
+        this.bearService = bearService;
+        this.bears = [];
+        this.islog = [];
     }
-    LoginComponent.prototype.onSubmit = function (email, password) {
-        var _this = this;
-        this.userService.login(email, password).subscribe(function (result) {
-            if (result) {
-                _this.router.navigate(['']);
+    /*  onSubmit(email, password) {
+        this.userService.login(email, password).subscribe((result) => {
+          if (result) {
+            this.router.navigate(['']);
+            console.log("salut")
+          }
+        });
+      }*/
+    LoginComponent.prototype.onSubmit3 = function (email) {
+        /*  this.bearService.getAllBears().subscribe(
+            bears => this.bears = bears );*/
+        for (var _i = 0, _a = this.bears; _i < _a.length; _i++) {
+            var bear = _a[_i];
+            if (bear.description == this.email) {
+                this.router.navigate(['wolf']);
                 console.log("salut");
             }
-        });
+            else {
+                console.log("salut");
+            }
+        }
     };
     return LoginComponent;
 }());
@@ -33,7 +50,9 @@ LoginComponent = __decorate([
         selector: 'login',
         templateUrl: "app/login/login.component.html",
     }),
-    __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
+    __metadata("design:paramtypes", [user_service_1.UserService,
+        router_1.Router,
+        bear_service_1.BearService])
 ], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

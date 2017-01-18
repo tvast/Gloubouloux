@@ -1,5 +1,6 @@
 export class Bear {
   	name : string; 
+  	password : string;
 	cover : string; 
 	profilePic : string; 
 	description: string; 

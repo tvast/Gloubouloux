@@ -3,6 +3,7 @@
 
 	var BearSchema = new Schema({
 		name : String,
+		/*password : String,*/
 		cover : String,
 		profilePic :String,
 		description: String,

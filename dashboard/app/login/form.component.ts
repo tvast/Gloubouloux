@@ -28,9 +28,11 @@ export class FormComponent {
   saveBear(bear: Bear) : void {
     let commentOperation:Observable<Bear[]>;
     this.bearService.addBear(this.bear).subscribe(
+      
       );
     let link = ['/wolf'];
     this.router.navigate(link);
+
   }
 
 
