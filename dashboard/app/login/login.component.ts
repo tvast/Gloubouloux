@@ -32,10 +32,12 @@ export class LoginComponent {
  
 
   onSubmit3(email : string) {
-  /*  this.bearService.getAllBears().subscribe(
-      bears => this.bears = bears );*/
+    this.bearService.getAllBears().subscribe(
+      bears => this.bears = bears );
 
         for (let bear of this.bears) {
+
+          
 
             if (bear.description == this.email) {
               this.router.navigate(['wolf']);
@@ -45,4 +47,17 @@ export class LoginComponent {
             }
           }
   }
+
+   onSubmit2() {
+      this.bearService.getAllBears().subscribe(
+        bears => {
+          this.bears = bears
+          for (let bear of bears) {
+            console.log(bear)
+          
+          }
+        }
+        
+      );
+    }
 }

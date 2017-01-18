@@ -30,8 +30,8 @@ var LoginComponent = (function () {
         });
       }*/
     LoginComponent.prototype.onSubmit3 = function (email) {
-        /*  this.bearService.getAllBears().subscribe(
-            bears => this.bears = bears );*/
+        var _this = this;
+        this.bearService.getAllBears().subscribe(function (bears) { return _this.bears = bears; });
         for (var _i = 0, _a = this.bears; _i < _a.length; _i++) {
             var bear = _a[_i];
             if (bear.description == this.email) {
@@ -42,6 +42,16 @@ var LoginComponent = (function () {
                 console.log("salut");
             }
         }
+    };
+    LoginComponent.prototype.onSubmit2 = function () {
+        var _this = this;
+        this.bearService.getAllBears().subscribe(function (bears) {
+            _this.bears = bears;
+            for (var _i = 0, bears_1 = bears; _i < bears_1.length; _i++) {
+                var bear = bears_1[_i];
+                console.log(bear);
+            }
+        });
     };
     return LoginComponent;
 }());
