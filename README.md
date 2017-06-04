@@ -1,4 +1,4 @@
-# Gloubouloux (beta)
+# Wolfsound (beta)
 
 # Requirements
 
